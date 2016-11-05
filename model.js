@@ -28,17 +28,17 @@ var schemas = {
   user_food: new Schema({
     user_id: String,
     food_id: String,
-    date:    Date
+    date:    String
   }),
   weight:  new Schema({
     user_id:  String,
     weight:   Number,
-    date:     Date
+    date:     String
   }),
   girl_weight:  new Schema({
     user_id:  String,
     weight:   Number,
-    date:     Date
+    date:     String
   }),
   training: new Schema({
     name:     String,
@@ -47,7 +47,7 @@ var schemas = {
   user_training: new Schema({
     user_id:     String,
     training_id: String,
-    date:        Date
+    date:        String
   })
 };
 

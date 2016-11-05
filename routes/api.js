@@ -121,4 +121,6 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
 
 
 
+
+
  module.exports = router;

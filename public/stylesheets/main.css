@@ -37,7 +37,7 @@ img {
 	height: 550px;
 	background: #fcddba;
   background-image: url('../images/background/beach.png');
-  background-size: 100%;
+  /*background-size: 100%;*/
 }
 
 #bottom{

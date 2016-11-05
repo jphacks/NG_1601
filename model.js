@@ -90,11 +90,22 @@ var models = {
      callback(data);
    });
  }
+function findOne(modelName, query, option, _callback) {
+   var callback = _callback || function(){};
+
+   models[modelName].find(query, option, function(err, data) {
+     if(err || data.lenght !== 1) {
+       console.log(err);
+     }
+     callback(data);
+   });
+ }
 
 
  return {
    save: save,
    find: find,
+   findOne: findOne,
    mongoose: mongoose
  };
 };

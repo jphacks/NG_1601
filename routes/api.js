@@ -32,6 +32,8 @@ user_idはセッションにより取得
 //ユーザの情報を取得
 router.get('/get/:modelName', loginCheck, function(req,res){
   var user_id = req.session.user_id;
+  console.log(req.session.user_id);
+  console.log(req.params.modelName);
   Model.find(req.params.modelName, {user_id: user_id}, {}, function(data) {
     res.json(data);
   });

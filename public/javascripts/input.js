@@ -3,8 +3,8 @@
 function init(){
   $.ajax({
     type: 'GET',
-    url: ''
-    dataType: 'jsonp',
+    url: '',
+    dataType: 'json',
     success: function(response){
 
       // 仮置き
@@ -24,3 +24,5 @@ function init(){
        }
    });
 }
+
+window.onload = init;

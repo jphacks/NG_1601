@@ -362,6 +362,9 @@ dbM.find('training', {}, {}, function(trainings) {
   // user_training_sample.forEach(function(d) {
   //   dbM.save('user_training', d);
   // });
+
+
+
 //この三行はコメントアウトしちゃ駄目
 });
 });

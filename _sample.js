@@ -1,47 +1,79 @@
+ var dbM = require('./model.js');
 
-var user_sample_data = [
-  {
-    name: 'suginyan',
-    email: 'suginyan@sugisugi.jp',
-    password: 0000,
-    gender: 0,
-    age: 22
-  },
-  {
-    name: 'tasuo',
-    email: 'tasuo@sugisugi.jp',
-    password: 0000,
-    gender: 0,
-    age:22
-  },
-  {
-    name: 'uuusiro',
-    email: 'uuusiro@sugisugi.jp',
-    password: 0000,
-    gender: 0,
-    age: 22
-  },
-  {
-    name: 'hisatoshi',
-    email: 'hisatoshi@sugisugi.jp',
-    password: 0000,
-    gender: 0,
-    age: 23
-  },
-  {
-    name: 'chika',
-    email:'chika@sugisugi.jp',
-    password: 0000,
-    gender: 1,
-    age: 55
-  }
-];
 
-  var dbM = require('./model.js')();
-  user_sample_data.forEach(function(user) {
-    dbM.save('user', user);
-    console.log("s");
+//
+// var user_sample_data = [
+//   {
+//     name: 'suginyan',
+//     email: 'suginyan@sugisugi.jp',
+//     password: 0000,
+//     gender: 0,
+//     age: 22
+//   },
+//   {
+//     name: 'tasuo',
+//     email: 'tasuo@sugisugi.jp',
+//     password: 0000,
+//     gender: 0,
+//     age:22
+//   },
+//   {
+//     name: 'uuusiro',
+//     email: 'uuusiro@sugisugi.jp',
+//     password: 0000,
+//     gender: 0,
+//     age: 22
+//   },
+//   {
+//     name: 'hisatoshi',
+//     email: 'hisatoshi@sugisugi.jp',
+//     password: 0000,
+//     gender: 0,
+//     age: 23
+//   },
+//   {
+//     name: 'chika',
+//     email:'chika@sugisugi.jp',
+//     password: 0000,
+//     gender: 1,
+//     age: 55
+//   }
+// ];
+//
+
+//   user_sample_data.forEach(function(user) {
+//     dbM.save('user', user);
+//   });
+//
+  dbM.find('user', {}, {},function(users) {
+    // 女の子の登録
+    var girl_sample_data = [
+      {
+        user_id: users[0]._id,
+        status: 2,
+      },
+      {
+        user_id: users[0]._id,
+        status: 1,
+      },
+      {
+        user_id: users[1]._id,
+        status: 2,
+      },
+      {
+        user_id: users[2]._id,
+        status: 3,
+      }
+    ];
+    girl_sample_data.forEach(function(d) {
+      dbM.save('girl', d);
+    });
   });
+
+
+
+
+
 
 //
 // var food_sample_data = [
@@ -113,23 +145,6 @@ var user_sample_data = [
 //   },
 // ];
 //
-// var girl_sample_data = [
-//   {
-//     user_id: 1,
-//     status: 2,
-//   },
-//   {
-//     user_id: 2,
-//     status: 1,
-//   },
-//   {
-//     user_id: 3,
-//     status: 2,
-//   },
-//   {
-//     user_id: 1,
-//     status: 3,
-//   }
-// ];
+
 //
 //

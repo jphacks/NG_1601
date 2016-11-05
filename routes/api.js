@@ -33,7 +33,7 @@ user_idはセッションにより取得
 //ユーザの情報を取得
 router.get('/get/:modelName', loginCheck, function(req,res){
   Model.find(req.params.modelName, req.session.user_id, {}, function(data) {
-    res.send(data);
+    res.json(data);
   });
 });
 
@@ -116,3 +116,5 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
   });
   res.send(ret);
 });
+
+ module.exports = router;

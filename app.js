@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
+var mongoStore = require('connect-mongo')(session);
+
+
+
 
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
@@ -12,13 +16,27 @@ var apis = require('./routes/api');
 
 var app = express();
 
-var Model = require('./model.js')();
+var Model = require('./model.js');
 
 
 var loginCheck = require('./loginChecker.js');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+app.use(session({
+  secret: 'secret',
+  store: new mongoStore({
+    url: 'mongodb://127.0.0.1/session',
+    autoRemove: 'interval',
+    autoRemoveInterval: 60
+  }),
+  cookie: {
+    httpOnly: true,
+    maxAge: 60 * 60 * 1000
+  }
+}));
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -28,18 +46,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    maxAge: 30 * 60 * 1000
-  }
-}));
+// app.use(session({
+//   secret: 'keyboard cat',
+//   resave: false,
+//   saveUninitialized: false,
+//   cookie: {
+//     maxAge: 30 * 60 * 1000
+//   }
+// }));
 
+// app.use(express.session({
+//   secret: 'a4f8071f-c873-4447-8ee2',
+//   cookie: { maxAge: 2628000000 },
+//   store: new (require('express-sessions'))({
+//     storage: 'mongodb',
+//     })
+// }));
 
+app.use('/apis', apis);
 //loginCheckをしてメイン画面へ
 app.get('/',loginCheck ,function(req, res, next) {
+  console.log(req.session);
   res.redirect('/index.html');
 });
 
@@ -60,20 +87,18 @@ app.post('/addNewUser', function(req, res) {
 //居たら，メイン画面へ
 app.post('/login', function(req, res) {
   var name = req.body.name;
-  var password = req.query.password;
+  var password = req.body.password;
   var query = {
     'name': name,
     'password': password
   };
-  Model.find('user', query, function(data) {
-    if(err) {
-      console.log(err);
-    }
-    if (data === '') {
+  Model.find('user', query, {}, function(data) {
+    if (data.length === 0) {
       res.redirect('/login.html');
     } else {
-      req.session.user_name = data.name;
-      req.session.user_id = data._id;
+      req.session.user_name = data[0].name;
+      req.session.user_id = data[0]._id;
+      console.log(req.session);
       res.redirect('/');
     }
   });

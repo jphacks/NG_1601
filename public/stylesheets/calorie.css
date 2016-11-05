@@ -1,0 +1,43 @@
+body {
+  margin: 0px;	
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#input_diet{
+	width: 100%;
+	height: 70px;
+	padding-top: 10px;
+	background: orange;
+	color: white;
+}
+
+#graph{
+	width: 100%;
+	height: 300px;
+}
+
+#girl_state{
+	width: 100%;
+	height: 416px;
+	background: #ccc;
+}
+
+#submit_button{
+	width: 200px;
+	height: 30px;
+	margin-top: 10px;
+	background: white;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	stroke-width: 1;
+}

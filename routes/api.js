@@ -29,11 +29,76 @@ router.post('/add/:modelName', loginCheck, function(req,res){
 user_idはセッションにより取得
 */
 
+
+//ユーザが持っている食べ物一覧
+router.get('/get/food_list', loginCheck, function(req, res) {
+  Model.find('user_food', {user_id: request.session.user_id}, {}, function(data) {
+    var ret = [];
+
+    data.forEach(function(d) {
+      var _ret = {};
+      _ret.food_id = d.food_id;
+      _ret.date = d.date;
+
+      Model.findOne('food', {food_id: d.food_id}, {}, function(f) {
+        _ret.calorie = f.calorie;
+        _ret.name = f.name;
+      });
+    });
+    ret.push(_ret);
+  });
+  res.send(ret);
+});
+
+//ユーザが持っているトレーニング一覧
+router.get('/get/traning_list', loginCheck, function(req, res) {
+  Model.find('user_training', {user_id: request.session.user_id}, {}, function(data) {
+    var ret = [];
+
+    data.forEach(function(d) {
+      var _ret = {};
+      _ret.traning_id = d.traning_id;
+      _ret.date = d.date;
+
+      Model.findOne('food', {traning_id: d.traning_id}, {}, function(f) {
+        _ret.calorie = f.calorie;
+        _ret.name = f.name;
+      });
+    });
+    ret.push(_ret);
+  });
+  res.send(ret);
+});
+
+
+router.get('/get/rest_calorie', function(req, res) {
+  Model.findOne('user', {user_id: request.session.user_id}, {}, function(data1) {
+    Model.find('user_food', {user_id: request.session.user_id}, {}, function(data2) {
+      var food_ids = [];
+      var today = (new Date()).toString();
+      data2.forEach(function(d) {
+        if(today === d.date) {
+          food_ids.push({
+            food_id: d[food_id]
+          });
+        }
+      });
+      var sum_colorie = 0;
+      Model.find('food', {$or: food_ids}, {}, function(data3) {
+        data3.forEach(function(food) {
+          sum_colorie+=food.colorie;
+        });
+        var rest = data1 - sum_colorie;
+        res.json({rest_calorie: rest});
+      })
+    });
+  });
+});
+
 //ユーザの情報を取得
 router.get('/get/:modelName', loginCheck, function(req,res){
   var user_id = req.session.user_id;
-  console.log(req.session.user_id);
-  console.log(req.params.modelName);
+
   Model.find(req.params.modelName, {user_id: user_id}, {}, function(data) {
     res.json(data);
   });
@@ -78,46 +143,6 @@ router.get('/get/:modelName', loginCheck, function(req,res){
 // router.get('/get/all_food', loginCheck, function(req, res) {
 //
 // });
-
-//ユーザが持っている食べ物一覧
-router.get('/get/food_list', loginCheck, function(req, res) {
-  Model.find('user_food', {user_id: request.session.user_id}, {}, function(data) {
-    var ret = [];
-
-    data.forEach(function(d) {
-      var _ret = {};
-      _ret.food_id = d.food_id;
-      _ret.date = d.date;
-
-      Model.findOne('food', {food_id: d.food_id}, {}, function(f) {
-        _ret.calorie = f.calorie;
-        _ret.name = f.name;
-      });
-    });
-    ret.push(_ret);
-  });
-  res.send(ret);
-});
-
-//ユーザが持っているトレーニング一覧
-router.get('/get/traning_list', loginCheck, function(req, res) {
-  Model.find('user_training', {user_id: request.session.user_id}, {}, function(data) {
-    var ret = [];
-
-    data.forEach(function(d) {
-      var _ret = {};
-      _ret.traning_id = d.traning_id;
-      _ret.date = d.date;
-
-      Model.findOne('food', {traning_id: d.traning_id}, {}, function(f) {
-        _ret.calorie = f.calorie;
-        _ret.name = f.name;
-      });
-    });
-    ret.push(_ret);
-  });
-  res.send(ret);
-});
 
 
 

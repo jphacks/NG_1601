@@ -97,7 +97,7 @@ app.post('/login', function(req, res) {
       res.redirect('/login.html');
     } else {
       req.session.user_name = data[0].name;
-      req.session.user_id = data[0]._id;
+      req.session.user_id = data[0].id;
       console.log(req.session);
       res.redirect('/');
     }

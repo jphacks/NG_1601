@@ -17,14 +17,7 @@ var girl_canvas = function() {
   var isFired = false;
 
   function init() {
-    // ctx.drawImage('./images/girl/1_smile.png', 0, 0);
-    // var image = new Image();
-    // image.src = '../images/girl/1_smile.png';
-    // image.onload = function(e) {
-    //   console.log(image.width);
-    //   console.log(image.height);
-    //   ctx.drawImage(image, (_element.width-image.width*0.5)*0.5, (_element.height-image.height*0.5)*0.5, image.width*0.5, image.height*0.5);
-    // };
+
     $.get('/apis/get/girl', function(data) {
 
       data = data[0];

@@ -51,6 +51,14 @@ var dbModel = function() {
 
  //モデルの登録をたくさん
  mongoose.model('User', UserSchema);
+ mongoose.model('Food', FoodSchema);
+ mongoose.model('Weight', WeightSchema);
+ mongoose.model('WeightTransition', WeightTransitionSchema);
+ mongoose.model('Girl', GirlSchema);
+ mongoose.model('Training', TrainingSchema);
+ mongoose.model('Ate', AteSchema);
+
+
 
  //
 

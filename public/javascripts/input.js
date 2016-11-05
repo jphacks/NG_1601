@@ -3,7 +3,7 @@
 function init(){
   $.ajax({
     type: 'GET',
-    url: '',
+    url: '/api/get/rest_calorie',
     dataType: 'json',
     success: function(response){
 
@@ -24,5 +24,5 @@ function init(){
        }
    });
 }
-
-window.onload = init;
+console.log('a');
+init();

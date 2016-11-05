@@ -1,7 +1,6 @@
 
 var user_sample_data = [
   {
-    id: 1,
     name: 'suginyan',
     email: 'suginyan@sugisugi.jp',
     password: 0000,
@@ -9,34 +8,30 @@ var user_sample_data = [
     age: 22
   },
   {
-    id: 2,
-    name: tasuo,
+    name: 'tasuo',
     email: 'tasuo@sugisugi.jp',
     password: 0000,
     gender: 0,
     age:22
   },
   {
-    id: 3,
-    name: uuusiro,
+    name: 'uuusiro',
     email: 'uuusiro@sugisugi.jp',
     password: 0000,
     gender: 0,
     age: 22
   },
   {
-    id: 4,
-    name: hisatoshi,
+    name: 'hisatoshi',
     email: 'hisatoshi@sugisugi.jp',
     password: 0000,
     gender: 0,
     age: 23
   },
   {
-    id: 5,
     name: 'chika',
     email:'chika@sugisugi.jp',
-    password:,0000
+    password: 0000,
     gender: 1,
     age: 55
   }
@@ -132,3 +127,7 @@ var girl_sample_data = [
 
 
 var dbM = require('./model.js')();
+
+for(var i=0; i<user_sample_data.length; i++){
+  dbM.save('user', user_sample_data[i],{});
+};

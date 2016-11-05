@@ -93,7 +93,7 @@ router.get('/get/food_list', loginCheck, function(req, res) {
       });
     });
     ret.push(_ret);
-  };
+  });
   res.send(ret);
 });
 
@@ -113,6 +113,6 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
       });
     });
     ret.push(_ret);
-  };
+  });
   res.send(ret);
 });

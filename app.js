@@ -12,8 +12,9 @@ var apis = require('./routes/api');
 
 var app = express();
 
-var loginCheck = require('./loginChecker.js');
+
 var dbModel = require('./model.js')();
+var loginCheck = require('./loginChecker.js');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

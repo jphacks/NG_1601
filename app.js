@@ -11,6 +11,9 @@ var users = require('./routes/users');
 
 var app = express();
 
+var loginCheck = require('./loginChecker.js');
+var dbModel = require('./model.js')();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -32,13 +35,6 @@ app.use(session({
   }
 }));
 
-var loginCheck = function(req, res, next) {
-  if(req.session.user) {
-    next();
-  } else {
-    res.redirect('/login');
-  }
-}
 
 
 

@@ -1,6 +1,13 @@
 var dbModel = function() {
 
+
  var mongoose = require('mongoose');
+ mongoose.Promise = global.Promise;
+
+
+
+
+
 
  // 定義フェーズ
  var Schema   = mongoose.Schema;
@@ -50,21 +57,22 @@ var schemas = {
 };
 
 var models = {
-  user: ('User', schemas.user),
-  girl: ('Girl', schemas.girl),
-  food: ('Food', schemas.food),
-  user_food: ('UserFood', schemas.user_food),
-  weight: ('Weight', schemas.weight),
-  girl_weight: ('GirlWeight', schemas.weight),
-  traning: ('Training', schemas.traning),
-  user_training: ('UserTraining', schemas.user_training),
+  user: mongoose.model('User', schemas.user),
+  girl: mongoose.model('Girl', schemas.girl),
+  food: mongoose.model('Food', schemas.food),
+  user_food: mongoose.model('UserFood', schemas.user_food),
+  weight: mongoose.model('Weight', schemas.weight),
+  girl_weight: mongoose.model('GirlWeight', schemas.weight),
+  traning: mongoose.model('Training', schemas.training),
+  user_training: mongoose.model('UserTraining', schemas.user_training),
 };
 
  // コネクト
  mongoose.connect('mongodb://localhost/sample_db');
 
- function save(modelName, data, callback) {
-   var _model = models[modelname];
+ function save(modelName, data, _callback) {
+   var callback = _callback || function(){};
+   var _model= models[modelName];
    var model = new _model();
    Object.keys(data).forEach(function(key) {
      model[key] = data[key];
@@ -77,6 +85,7 @@ var models = {
  }
 
  function find(modelName, query, option, callback) {
+   console.log(modelName);
    models[modelName].find(query, option, function(err, data) {
      if(err) {
        console.log(err);
@@ -85,34 +94,6 @@ var models = {
    });
  }
 
-
- //セーブのサンプル
- // var User = mongoose.model('User');
- // var user = new User();
- // user.name  = 'KrdLab';
- // user.point = 777;
- // user.save(function(err) {
- //   if (err) { console.log(err); }
- // });
-
- // ※注意：イベント駆動
-
- //ファインドのサンプル
- // User.find({}, function(err, docs) {
- //   for (var i=0, size=docs.length; i<size; ++i) {
- //     console.log(docs[i].doc.name);
- //   }
- // });
-
-
- function find(modelname, query, option, callback) {
-   var _model = models[modelname];
-   var model = new _model();
-   model.find({_id: req.params.id}, function(err,){
-
-  });
-
- }
 
  return {
    save: save,

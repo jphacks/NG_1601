@@ -51,11 +51,10 @@ var schemas = {
 
 var models = {
   user: ('User', schemas.user),
-  girl:, ('Girl', schemas.girl),
+  girl: ('Girl', schemas.girl),
   food: ('Food', schemas.food),
   user_food: ('UserFood', schemas.user_food),
   weight: ('Weight', schemas.weight),
-  girl: ('Girl', schemas.girl),
   girl_weight: ('GirlWeight', schemas.weight),
   traning: ('Training', schemas.traning),
   user_training: ('UserTraining', schemas.user_training),

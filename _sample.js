@@ -132,12 +132,16 @@ girl
       status: 2,
     },
     {
-      user_id: 0,
+      user_id: 3,
       status: 1,
     },
     {
       user_id: 1,
       status: 2,
+    },
+    {
+      user_id: 2,
+      status: 3,
     },
     {
       user_id: 2,

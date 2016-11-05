@@ -73,7 +73,6 @@ var models = {
      model[key] = data[key];
    });
    model.save(function(err) {
-     //とりあえず
      if(err) {console.log(err);}
      callback();
    })
@@ -86,9 +85,6 @@ var models = {
      if(err) {
        console.log(err);
      }
-     console.log('d');
-     console.log(data);
-     console.log('_d');
      callback(data);
    });
  }

@@ -1,9 +1,8 @@
  var dbM = require('./model.js');
 
-
-
-
-//
+/*****************************************
+user
+*****************************************/
 // var user_sample_data = [
 //   {
 //     name: 'suginyan',
@@ -41,43 +40,16 @@
 //     age: 55
 //   }
 // ];
-//
-
 //   user_sample_data.forEach(function(user) {
 //     dbM.save('user', user);
 //   });
 //
-  dbM.find('user', {}, {},function(users) {
-    // 女の子の登録
-    var girl_sample_data = [
-      {
-        user_id: users[0]._id,
-        status: 2,
-      },
-      {
-        user_id: users[0]._id,
-        status: 1,
-      },
-      {
-        user_id: users[1]._id,
-        status: 2,
-      },
-      {
-        user_id: users[2]._id,
-        status: 3,
-      }
-    ];
-    girl_sample_data.forEach(function(d) {
-      dbM.save('girl', d);
-    });
-  });
 
 
 
-
-
-
-//
+/*****************************************
+food
+*****************************************/
 // var food_sample_data = [
 //   {
 //     name: 'かつどぅん',
@@ -92,6 +64,44 @@
 //     calorie: 708
 //   },
 // ];
+// food_sample_data.forEach(function(data) {
+//   dbM.save('food', data);
+// });
+
+
+
+  dbM.find('user', {}, {},function(users) {
+
+
+    // 女の子の登録
+  //   var girl_sample_data = [
+  //     {
+  //       user_id: users[0]._id,
+  //       status: 2,
+  //     },
+  //     {
+  //       user_id: users[0]._id,
+  //       status: 1,
+  //     },
+  //     {
+  //       user_id: users[1]._id,
+  //       status: 2,
+  //     },
+  //     {
+  //       user_id: users[2]._id,
+  //       status: 3,
+  //     }
+  //   ];
+  //   girl_sample_data.forEach(function(d) {
+  //     dbM.save('girl', d);
+  //   });
+
+
+
+});
+
+
+
 //
 // var weight_sample_data = [
 //   {

@@ -12,9 +12,8 @@ var loginCheck = require('../loginChecker.js');
 //   });
 // });
 
-router.post('/add/:schemaName', loginCheck, function(req,res){
-  Model.save(req.params.schemaName, req.body, function(err,user){
-      if(err) throw err;
+router.post('/add/:modelName', loginCheck, function(req,res){
+  Model.save(req.params.modelName, req.body, function(){
       res.send({result: true});
   });
 });
@@ -32,7 +31,8 @@ user_idはセッションにより取得
 
 //ユーザの情報を取得
 router.get('/get/:modelName', loginCheck, function(req,res){
-  Model.find(req.params.modelName, req.session.user_id, {}, function(data) {
+  var user_id = req.session.user_id;
+  Model.find(req.params.modelName, {user_id: user_id}, {}, function(data) {
     res.json(data);
   });
 });
@@ -116,5 +116,7 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
   });
   res.send(ret);
 });
+
+
 
  module.exports = router;

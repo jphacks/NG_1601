@@ -56,8 +56,8 @@ var ar_canvas = function() {
       ctx.stroke();
     }
     ctx.beginPath();
-    ctx.font = 'italic 400 30px/2 Unknown Font, sans-serif';
-    ctx.fillText('マッスルポイントの残り', 50,50);
+    ctx.font = 'italic 400 18px/2 Unknown Font, sans-serif';
+    ctx.fillText('マッスルポイントの残り'+muscle_point, 50,50);
     ctx.stroke();
 
     tresure = new Image();
@@ -88,18 +88,35 @@ var ar_canvas = function() {
         current_position.x = newPosition.x;
         current_position.y = newPosition.y;
         muscle_point -=distance;
-        console.log(distance);
-        console.log(muscle_point);
 
-
-        tresure_positions.forEach(function(tresure_position) {
+        tresure_positions.forEach(function(tresure_position, index) {
           if(current_position.x === tresure_position.x && current_position.y === tresure_position.y) {
-            getDon();
+
+            tresure_positions.splice(index, 1);
+            $.post('/apis/set_user_food', function(err, data) {
+              if(err) {console.log(err);}
+
+
+              /***************************************************
+              ここで良い感じにかつどぅ〜んを出す．コールバックでrefresh_map()
+              ***************************************************/
+              var don = new Image();
+              don.src='../images/food/katsu.png'
+              don.addEventListener('load', function(e) {
+                ctx.clearRect(0, 0, _element.width, _element.height);
+                ctx.drawImage(don, (_element.width-don.width)*0.5, (_element.width-don.width)*0.5, don.width, don.height);
+                ctx.textAlign = 'center';
+                ctx.font = 'italic 400 30px/2 Unknown Font, sans-serif';
+                ctx.fillText('かつどぅ〜ん！！！！！', _element.width*0.5,_element.height*0.8);
+                console.log(tresure_positions);
+                setTimeout(refresh_map, 3000);
+              });
+            });
+
+          } else {
+            refresh_map();
           }
         });
-        refresh_map();
-
-
       }
     });
   }

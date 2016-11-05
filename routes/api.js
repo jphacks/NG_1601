@@ -12,6 +12,10 @@ router.post('/add/:modelName', loginCheck, function(req,res){
 });
 
 
+//間に合いそうにない……
+router.post('/set_user_food', function(req, res) {
+  res.json({});
+});
 /*********************************************************
 こっからがGET
 *********************************************************/

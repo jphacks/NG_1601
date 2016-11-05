@@ -44,6 +44,7 @@ var girl_canvas = function() {
   function refresh_expression() {
     isFired = false;
     var image = girlImages[current_expression];
+    console.log(current_expression);
     ctx.font = 'italic 400 30px/2 Unknown Font, sans-serif';
     ctx.clearRect(0, 0, _element.width, _element.height);
     ctx.drawImage(image, (_element.width-image.width*0.5)*0.5, (_element.height-image.height*0.5)*0.5, image.width*0.5, image.height*0.5)
@@ -54,7 +55,7 @@ var girl_canvas = function() {
   function speak() {
     ctx.drawImage(hukidashi, _element.width*0.5-hukidashi.width*0.5*4, _element.height*0.6, hukidashi.width*4, hukidashi.height*4);
     var text = texts[Math.floor(Math.random()*texts.length)];
-    current_expression = girlImages[Math.floor(Math.random()*Object.keys(girlImages).length)];
+    current_expression = Object.keys(girlImages)[Math.floor(Math.random()*Object.keys(girlImages).length)];
     ctx.textAlign = 'center';
     ctx.fillText(text, _element.width*0.5, _element.height*0.8);
   }

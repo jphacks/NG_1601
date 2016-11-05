@@ -18,7 +18,7 @@ var schemas = {
     age:      Number
   }),
   girl: new Schema({
-    user_id:  Number,
+    user_id:  String,
     status:   Number,
   }),
   food: new Schema({
@@ -26,17 +26,17 @@ var schemas = {
     calorie:  String
   }),
   user_food: new Schema({
-    user_id: Number,
-    food_id: Number,
+    user_id: String,
+    food_id: String,
     date:    Date
   }),
   weight:  new Schema({
-    user_id:  Number,
+    user_id:  String,
     weight:   Number,
     date:     Date
   }),
   girl_weight:  new Schema({
-    user_id:  Number,
+    user_id:  String,
     weight:   Number,
     date:     Date
   }),
@@ -45,8 +45,8 @@ var schemas = {
     calorie:  Number
   }),
   user_training: new Schema({
-    user_id:     Number,
-    training_id: Number,
+    user_id:     String,
+    training_id: String,
     date:        Date
   })
 };
@@ -79,12 +79,16 @@ var models = {
    })
  }
 
- function find(modelName, query, option, callback) {
-   console.log(modelName);
+ function find(modelName, query, option, _callback) {
+   var callback = _callback || function(){};
+
    models[modelName].find(query, option, function(err, data) {
      if(err) {
        console.log(err);
      }
+     console.log('d');
+     console.log(data);
+     console.log('_d');
      callback(data);
    });
  }
@@ -92,8 +96,9 @@ var models = {
 
  return {
    save: save,
-   find: find
+   find: find,
+   mongoose: mongoose
  };
 };
 
-module.exports = dbModel;
+module.exports = dbModel();

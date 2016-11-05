@@ -41,6 +41,12 @@ var dbModel = function() {
    calorie:  Number
  });
 
+ var AteSchama = new Schama({
+   user_id: Number,
+   food_id: Number,
+   date:    Date
+ });
+
  //
 
  //モデルの登録をたくさん

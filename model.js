@@ -63,7 +63,7 @@ var models = {
  // コネクト
  mongoose.connect('mongodb://localhost/sample_db');
 
- function save(modelname, data, callback) {
+ function save(modelName, data, callback) {
    var _model = models[modelname];
    var model = new _model();
    Object.keys(data).forEach(function(key) {
@@ -74,6 +74,15 @@ var models = {
      if(err) {console.log(err);}
      callback();
    })
+ }
+
+ function find(modelName, query, option, callback) {
+   models[modelName].find(query, option, function(err, data) {
+     if(err) {
+       console.log(err);
+     }
+     callback(data);
+   });
  }
 
 

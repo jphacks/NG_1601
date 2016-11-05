@@ -12,7 +12,7 @@
     <div class="header">
       <h1>アプリ名</h1>
     </div><!--- header --->
-    <form id="form01" method="post" action="/login">
+    <form id="form01" method="get" action="/login">
       <p>
         ユーザー名<br />
         <input type="text" name="id" style="width:240px" /><br />
@@ -20,8 +20,12 @@
         <input type="password" name="password" style="width:240px" />
       </p>
       <p>
-        <input type="submit" value="ログイン">
+        <input type="submit" value="新規">
       </p>
+    </form>
+
+    <form class="form02" action="signup.html" method="get">
+      <input type="submit" value="新規">
     </form>
   </div><!--- container --->
 </body>

@@ -40,6 +40,7 @@ var user_sample_data = [
   var dbM = require('./model.js')();
   user_sample_data.forEach(function(user) {
     dbM.save('user', user);
+    console.log("s");
   });
 
 //

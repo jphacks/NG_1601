@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>fat-cats</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- デザイン -->
+    <link rel='stylesheet' href='./stylesheets/main.css'/>
+    <link rel='stylesheet' href='./stylesheets/calorie.css'/>
+    <script src="./javascripts/jquery.min.js"></script>
+    <!-- d3.js -->
+    <script src="./javascripts/d3.js"></script>
+  </head>
+  <body>
+   <div id="input_diet">
+     <form name="input_calorie" method="post">
+        カロリー
+        <input type="text" name="calorie"/>
+        体重
+        <input type="text" name="weight"/>
+        <input type="submit" id="submit_button" value="送信する">
+     </form>
+  </div>
+  <div id="graph">
+  <div id="result"></div>
+  </div>
+  <div id="girl_state">女の子の状態</div>
+  <!-- グラフを書く -->
+  <script src="./javascripts/draw_graph.js"></script>
+  <script>
+  // テストデータ
+  // 基本は一週間
+   var data = [
+  [ new Date(2014, 4, 21), 58, 2000],
+  [ new Date(2014, 4, 22), 59, 1800],
+  [ new Date(2014, 4, 23), 60, 2300],
+  [ new Date(2014, 4, 24), 58, 2000],
+  [ new Date(2014, 4, 25), 59, 1800],
+  [ new Date(2014, 4, 26), 60, 2300],
+  [ new Date(2014, 4, 27), 70, 2300]
+  ];
+  // グラフ描画
+  draw_graphModule(data);
+  </script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 body {
-  margin: 0px;	
+  margin: 0px;
   font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
 }
@@ -33,7 +33,17 @@ a {
 	height: 30px;
 	margin-top: 10px;
 	background: white;
+  border-radius: 50px;
 }
+
+.calorie {
+  border-radius: 50px;
+}
+
+.weight {
+  border-radius: 50px;
+}
+
 
 .axis path,
 .axis line {

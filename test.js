@@ -63,3 +63,21 @@
 //     cha
 //   },
 // ]
+
+
+// var Ai = {
+//   hoge: 'aiueo'
+// };
+//
+// var user = {
+//   hoge: new Date()
+// };
+//
+// console.log(user);
+
+var hoge = {
+  a: '1',
+  b: '2'
+};
+
+Object.keys(hoge);

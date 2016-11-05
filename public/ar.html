@@ -5,14 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <!-- デザイン -->
+    <link rel='stylesheet' href='./stylesheets/main.css'/>
     <link rel='stylesheet' href='./stylesheets/ar.css'/>
     <script src="./javascripts/jquery.min.js"></script>
   </head>
   <body>
-   <!-- AR -->
-   <div id="ar">
-   <div id="result"></div>
+   <div id="top">
+     <!-- 日付表示 -->
+     <div id="date"></div>
+     <!-- タイトル表示 -->
+     <div id="title"></div>
+     <!-- カロリー表示 -->
+     <div id="circle">
+     <div id="calorie">
+     </div>
+     </div>
    </div>
+   <!-- AR -->
+   <div id="ar">AR</div>
    <!-- 女の子が手に入れたもの -->
    <div id="get_list">
      <div class="food_title">手に入れた食べ物</div>
@@ -25,6 +35,7 @@
    </div>
    <script src="./javascripts/get_food.js"></script>
    <script src="./javascripts/eat_food.js"></script>
+   <script src="./javascripts/input.js"></script>
    <script>
    //テストデータ
    //手に入れたもの(仮)
@@ -35,32 +46,7 @@
   //  var eat_data = ["おにぎり","昆布","梅","シャケ"];
   //  eat_foodModule(eat_data);
 
+   inputModule();
    </script>
-   <script>
-      window.addEventListener("load", function(){
-        var result = document.getElementById("result");
-         
-        if (!navigator.geolocation){
-          result.innerHTML = "Geolocation 使用不可";
-          return;
-        }
-         
-        var option = {
-          timeout : 10000
-        }
-        navigator.geolocation.watchPosition(resultHandler, faultHandler, option);
-         
-        function resultHandler(position){
-          var latitude = position.coords.latitude;
-          var longitude = position.coords.longitude;
-          result.innerHTML = "緯度："+latitude+"<br>" + 
-            "経度："+longitude;
-        }
-         
-        function faultHandler(error){
-          result.innerHTML = error.code;
-        }
-      }, true);
-    </script>
   </body>
 </html>

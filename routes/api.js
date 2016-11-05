@@ -5,12 +5,6 @@ var loginCheck = require('../loginChecker.js');
 var isSameDay = require('../modules/isSameDay');
 
 
-// router.get('/user', loginCheck, function(req,res){
-//   Model.find('user', req.params.query, function(data) {
-//     res.send(data);
-//   });
-// });
-
 router.post('/add/:modelName', loginCheck, function(req,res){
   Model.save(req.params.modelName, req.body, function(){
       res.send({result: true});
@@ -73,7 +67,6 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
 router.get('/get/rest_calorie', function(req, res) {
   console.log('---------------------------------------');
   Model.findOne('user', {user_id: req.session.user_id}, {}, function(data1) {
-    console.log(data1);
     Model.find('user_food', {user_id: req.session.user_id}, {}, function(data2) {
       var food_ids = [];
       var today = (new Date()).toString();
@@ -86,27 +79,29 @@ router.get('/get/rest_calorie', function(req, res) {
         }
       });
       if(food_ids.length === 0) {
-        console.log(data1);
-        console.log(req.session.user_id);
-        res.json(data1.allowed_calorie);
-      }
-      var sum_calorie = 0;
-      Model.find('food', {$or: food_ids}, {}, function(data3) {
-        data3.forEach(function(food) {
-          sum_calorie+=food.calorie;
+        res.json({rest_calorie: data1['allowed_calorie']});
+      } else {
+        var sum_calorie = 0;
+        Model.find('food', {$or: food_ids}, {}, function(data3) {
+          data3.forEach(function(food) {
+            sum_calorie+=food.calorie;
+          });
+          var rest = data1.allowed_calorie - sum_calorie;
+          res.json({rest_calorie: rest});
         });
-        var rest = data1.allowed_calorie - sum_calorie;
-        res.json({rest_calorie: rest});
-      })
+      }
     });
   });
 });
 
 //ユーザの情報を取得
 router.get('/get/:modelName', loginCheck, function(req,res){
+  // console.log('aiueo');
+  // console.log(req.params.modelName);
   var user_id = req.session.user_id;
 
   Model.find(req.params.modelName, {user_id: user_id}, {}, function(data) {
+    console.log(data);
     res.json(data);
   });
 });

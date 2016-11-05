@@ -46,23 +46,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(session({
-//   secret: 'keyboard cat',
-//   resave: false,
-//   saveUninitialized: false,
-//   cookie: {
-//     maxAge: 30 * 60 * 1000
-//   }
-// }));
-
-// app.use(express.session({
-//   secret: 'a4f8071f-c873-4447-8ee2',
-//   cookie: { maxAge: 2628000000 },
-//   store: new (require('express-sessions'))({
-//     storage: 'mongodb',
-//     })
-// }));
-
 app.use('/apis', apis);
 //loginCheckをしてメイン画面へ
 app.get('/',loginCheck ,function(req, res, next) {

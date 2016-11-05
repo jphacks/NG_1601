@@ -8,12 +8,12 @@ function init(){
     success: function(response){
 
       // 仮置き
-     var calorie = 30;
+     var calorie = response.rest_calorie;
      var _date = new Date();
      var _month = _date.getMonth() + 1;
-     var _day = _date.getDay();
+     var _day = _date.getDate();
      var date = _month+"月"+_day+"日";
-     var title = "タイトル";
+     var title = "猫やせ";
 
       document.getElementById('calorie').innerHTML = "残り" + calorie + "calorie";
       document.getElementById('title').innerHTML = title;

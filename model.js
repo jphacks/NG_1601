@@ -17,7 +17,17 @@ var schemas = {
     gender:          Number,
     age:             Number,
     allowed_calorie: String,
-    user_id: String
+    user_id: String,
+    tresure_positions: [{
+      x: Number,
+      y: Number,
+      rest: Number
+    }],
+    current_position: {
+      x: Number,
+      y: Number
+    },
+    muscle_point: Number
   }),
   girl: new Schema({
     user_id:  String,
@@ -31,7 +41,8 @@ var schemas = {
   user_food: new Schema({
     user_id: String,
     food_id: String,
-    date:    String
+    date:    String,
+    is_finished: Boolean
   }),
   weight:  new Schema({
     user_id:  String,
@@ -51,7 +62,8 @@ var schemas = {
   user_training: new Schema({
     user_id:     String,
     training_id: String,
-    date:        String
+    date:        String,
+    is_finished: Boolean
   })
 };
 

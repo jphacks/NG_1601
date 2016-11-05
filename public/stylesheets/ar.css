@@ -1,60 +1,127 @@
 body {
-  margin: 0px;	
+  margin: 0px;
+  width: 375px;
   font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
 a {
   text-decoration: none;
+  height: 44px;
   color: white;
 }
+/*
+img {
+	width: 408px;
+	height: 512px;
+}*/
 
-ul{
-	margin: 0px;
-	padding: 0px;
-}
-
-#ar{
+#top{
 	width: 100%;
-	height: 457px;
-	background: #ccc;
-}
-
-#get_list{
-	width: 186px;
-	height: 150px;
-	border-right: 3px solid #fcc685;
-	float: left;
-}
-
-#eat_list{
-	width: 186px;
-	height: 150px;
-	float: left;
-}
-
-#get_food_list{
-	width: 100%;
-	height: 115px;
-	overflow:auto;
-}
-
-#eat_food_list{
-	width: 100%;
-	height: 115px;
-	overflow:auto;
-}
-body li:nth-child(even) { background-color:#ffffff; }
-body li:nth-child(odd) { background-color:#ffe6c7; }
-
-.food_title{
-	width: 186px;
-	/*margin: 10px 5% 10px 5%;*/
-	padding-top: 5px;
-	height: 30px;
-	background: orange;
+	height: 50px;
+	padding-top: 10px;
+	/*background: orange;*/
 	color: white;
-	/*border-radius: 10px;       
-    -webkit-border-radius: 10px;    
-    -moz-border-radius: 10px;*/  
+	background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+}
+
+#main{
+	width: 100%;
+	height: 550px;
+	background: #fcddba;
+  /*background-size: 100%;*/
+}
+
+#bottom{
+	width: 100%;
+	height: 66px;
+	font-size: 18px;
+	background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+    text-align: center;
+}
+
+
+
+#date{
+	width: 30%;
+	height: 30px;
+	padding-top: 10px;
+	font-size: 20px;
+	float: left;
+}
+
+#title{
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+
+#calorie{
+	position: absolute;
+    right: 150px;
+    top: 150px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+#circle{
+	position: absolute;
+    right: 0px;
+    top: 0px;
+    color: white;
+    width: 130px;
+    height: 130px;
+    border-radius:0 0 0 115px;
+    font-size: 13px;
+    background-image:-moz-linear-gradient(
+    top,
+    #ff4500 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ff4500),
+    to(#ff8300));
+}
+
+#input_calorie{
+	width: 124px;
+	height: 44px;
+    padding-top: 20px;
+    border-right:solid 1px #fff;
+	float: left;
+}
+
+#input_ar{
+	width: 124px;
+	height: 44px;
+    padding-top: 20px;
+    border-right:solid 1px #fff;
+	float: left;
+}
+
+#input_other{
+	width: 126px;
+	height: 44px;
+    padding-top: 20px;
+	float: left;
 }

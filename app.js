@@ -60,16 +60,16 @@ app.post('/addNewUser', function(req, res) {
 //居たら，メイン画面へ
 app.post('/login', function(req, res) {
   var name = req.body.name;
-  var password = req.query.password;
+  var password = req.body.password;
   var query = {
     'name': name,
     'password': password
   };
-  Model.find('user', query, function(data) {
+  Model.find('user', query, function(err, data) {
     if(err) {
       console.log(err);
     }
-    if (data === '') {
+    if (data.length === 0) {
       res.redirect('/login.html');
     } else {
       req.session.user_name = data.name;

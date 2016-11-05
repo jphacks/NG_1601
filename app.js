@@ -12,6 +12,8 @@ var apis = require('./routes/api');
 
 var app = express();
 
+var Model = require('./models.js')();
+
 
 var dbModel = require('./model.js')();
 var loginCheck = require('./loginChecker.js');
@@ -36,40 +38,52 @@ app.use(session({
   }
 }));
 
+
+//loginCheckをしてメイン画面へ
 app.get('/',loginCheck ,function(req, res, next) {
-  res.send(__dirname);
+  res.redirect('/index.html');
 });
 
 
 //新しいユーザの登録
 app.post('/addNewUser', function(req, res) {
-  var newUser = new User(req.body);
-  newUser.save(function(err) {
+  Model.save('user', req.body, function() {
     if(err) {
       console.log(err);
     } else {
-      res.redirect('/')
+      res.redirect('/index.html');
     }
   });
 });
 
-app.get('/login', function(req, res) {
-  console.log('aiueo');
-  var id = req.query.id;
-  // var email = req.query.email;
+//ログイン画面より，
+//ユーザが居るかどうかの確認
+//居たら，メイン画面へ
+app.post('/login', function(req, res) {
+  var name = req.body.name;
   var password = req.query.password;
-  var query = {'email': email, 'password': password};
-  User.find(query, function(err, data) {
+  var query = {
+    'name': name,
+    'password': password
+  };
+  Model.findOne('user', query, function(data) {
     if(err) {
       console.log(err);
     }
     if (data === '') {
-      res.render('login');
+      res.redirect('/login.html');
     } else {
-      req.session.user = email;
+      req.session.user_name = data.name;
+      req.session.user_id = data._id;
       res.redirect('/');
     }
   });
+});
+
+//ログイン画面を取得
+//もちろん，sessionの確認は行わない
+app.get('/login', function(req, res) {
+  res.redirect('/login.html')
 });
 
 

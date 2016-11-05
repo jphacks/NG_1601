@@ -8,18 +8,23 @@
 </head>
 
 <body>
-  <dev class="container">
-    <form id="form01", method="post">
+  <div class="container">
+    <div class="header">
+      <h1>アプリ名</h1>
+    </div><!--- header --->
+    <form id="form01" method="post" action="hoge.com">
       <p>
         ユーザー名<br />
-        <input type="text", name="username", style="width:200px" /><br>
+        <input type="text" name="username" style="width:240px" /><br />
         パスワード<br />
-        <input type="text", name="passwd", style="width:200px" />
+        <input type="text" name="passwd" style="width:240px" />
+      </p>
+      <p>
       </p>
       <p>
         <button type="button" name="button">ログイン</button>
       </p>
     </form>
-  </dev>
+  </div><!--- container --->
 </body>
 </html>

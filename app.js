@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var MongoStore = require('connect-mongo')(express);
 
 var app = express();
 
@@ -21,9 +22,66 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.session({
+  secret: 'secret',
+  store: new MongoStore({
+      db: 'session',
+      host: 'localhost',
+      clear_interval: 60 * 60
+  }),
+  cookie: {
+      httpOnly: false,
+      maxAge: new Date(Date.now() + 60 * 60 * 1000)
+  }
+})); 
 
-app.use('/', routes);
-app.use('/users', users);
+var loginCheck = function(req, res, next) {
+  if(req.session.user) {
+    next();
+  } else {
+    res.redirect('/login');
+  }
+}
+
+// app.use('/', routes);
+// app.use('/users', users);
+
+
+app.get('/',loginCheck ,function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+
+//新しいユーザの登録
+app.post('/addNewUser', function(req, res) {
+  var newUser = new User(req.body);
+  newUser.save(function(err) {
+    if(err) {
+      console.log(err);
+    } else {
+      res.redirect('/')
+    }
+  });
+});
+
+app.get('/login', function(req, res) {
+  var id = req.query.id;
+  var email = req.query.email;
+  var password = req.query.password;
+  var query = {'email': email, 'password': password};
+  User.find(query, function(err, data) {
+    if(err) {
+      console.log(err);
+    }
+    if (data === '') {
+      res.render('login');
+    } else {
+      req.session.user = email;
+      res.redirect('/');
+    }
+  });
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

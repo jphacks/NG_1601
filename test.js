@@ -15,11 +15,12 @@ var Model = require('./model.js');
 var isSameDay = require('./modules/isSameDay.js');
 
 function hoge() {
-  Model.findOne('user', {user_id: '581db789523ca730033792f6'}, {}, function(data1) {
-    Model.find('user_food', {user_id: '581db789523ca730033792f6'}, {}, function(data2) {
+  Model.findOne('user', {user_id: req.session.user_id}, {}, function(data1) {
+    console.log(data1);
+    Model.find('user_food', {user_id: req.session.user_id}, {}, function(data2) {
       var food_ids = [];
-      // var today = (new Date()).toString();
-      var today = 'Tue Nov 01 2016 00:00:00 GMT+0900 (JST)'
+      var today = (new Date()).toString();
+      // var today = 'Tue Nov 01 2016 00:00:00 GMT+0900 (JST)'
       data2.forEach(function(d) {
         if(isSameDay(today, d.date)) {
           food_ids.push({
@@ -27,15 +28,16 @@ function hoge() {
           });
         }
       });
-
-      var sum_colorie = 0;
+      if(food_ids.length === 0) {
+        res.send(data1.allowed_calorie);
+      }
+      var sum_calorie = 0;
       Model.find('food', {$or: food_ids}, {}, function(data3) {
         data3.forEach(function(food) {
-          sum_colorie+=food.colorie;
+          sum_calorie+=food.calorie;
         });
-        var rest = data1 - sum_colorie;
-        // res.json({rest_calorie: rest});
-        console.log(rest);
+        var rest = data1.allowed_calorie - sum_calorie;
+        res.json({rest_calorie: rest});
       })
     });
   });

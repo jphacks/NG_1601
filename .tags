@@ -46,6 +46,8 @@ dbModel.find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(
 dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
 statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
 statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
-isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1
+isOver
+
+	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1
 sum	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^    var sum  = function(arr) {$/;"	function	line:27
 isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1

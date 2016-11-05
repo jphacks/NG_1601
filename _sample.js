@@ -12,7 +12,7 @@ var user_sample_data = [
     gender: 0,
     age: 22,
     user_id: 0,
-    allowed_colorie: 2000
+    allowed_calorie: 2000
   },
   {
     name: 'tasuo',
@@ -21,7 +21,7 @@ var user_sample_data = [
     gender: 0,
     age:22,
     user_id: 1,
-    allowed_colorie: 2000
+    allowed_calorie: 2000
 
   },
   {
@@ -31,7 +31,7 @@ var user_sample_data = [
     gender: 0,
     age: 22,
     user_id: 2,
-    allowed_colorie: 2000
+    allowed_calorie: 2000
 
   },
   {
@@ -41,7 +41,7 @@ var user_sample_data = [
     gender: 0,
     age: 23,
     user_id: 3,
-    allowed_colorie: 2000
+    allowed_calorie: 2000
 
   },
   {
@@ -51,7 +51,7 @@ var user_sample_data = [
     gender: 1,
     age: 55,
     user_id: 4,
-    allowed_colorie: 2000
+    allowed_calorie: 2000
 
   }
 ];
@@ -124,7 +124,7 @@ traning_sample_data.forEach(function(d) {
 // dbM.find('training', {}, {}, function(trainings) {
 
  /*****************************************
- user
+girl
  *****************************************/
   var girl_sample_data = [
     {

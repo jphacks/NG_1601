@@ -16,7 +16,7 @@ var schemas = {
     password:        String,
     gender:          Number,
     age:             Number,
-    allowed_colorie: String,
+    allowed_calorie: String,
     user_id: String
   }),
   girl: new Schema({
@@ -25,7 +25,7 @@ var schemas = {
   }),
   food: new Schema({
     name:     String,
-    calorie:  String,
+    calorie:  Number,
     food_id: String
   }),
   user_food: new Schema({
@@ -95,10 +95,9 @@ var models = {
 function findOne(modelName, query, option, _callback) {
    var callback = _callback || function(){};
 
-   models[modelName].find(query, option, function(err, data) {
-     if(err || data.length !== 1) {
+   models[modelName].findOne(query, option, function(err, data) {
+     if(err) {
        console.log(err);
-       console.log('a');
      }
      callback(data);
    });

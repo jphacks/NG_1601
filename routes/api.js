@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Model = require('../model.js');
 var loginCheck = require('../loginChecker.js');
-// var mongodb = require('mongodb');
-// var mongoose = require('mongoose');
+var isSameDay = require('../modules/isSameDay');
 
 
 // router.get('/user', loginCheck, function(req,res){
@@ -72,23 +71,31 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
 
 
 router.get('/get/rest_calorie', function(req, res) {
-  Model.findOne('user', {user_id: request.session.user_id}, {}, function(data1) {
-    Model.find('user_food', {user_id: request.session.user_id}, {}, function(data2) {
+  console.log('---------------------------------------');
+  Model.findOne('user', {user_id: req.session.user_id}, {}, function(data1) {
+    console.log(data1);
+    Model.find('user_food', {user_id: req.session.user_id}, {}, function(data2) {
       var food_ids = [];
       var today = (new Date()).toString();
+      // var today = 'Tue Nov 01 2016 00:00:00 GMT+0900 (JST)'
       data2.forEach(function(d) {
-        if(today === d.date) {
+        if(isSameDay(today, d.date)) {
           food_ids.push({
-            food_id: d[food_id]
+            food_id: d['food_id']
           });
         }
       });
-      var sum_colorie = 0;
+      if(food_ids.length === 0) {
+        console.log(data1);
+        console.log(req.session.user_id);
+        res.json(data1.allowed_calorie);
+      }
+      var sum_calorie = 0;
       Model.find('food', {$or: food_ids}, {}, function(data3) {
         data3.forEach(function(food) {
-          sum_colorie+=food.colorie;
+          sum_calorie+=food.calorie;
         });
-        var rest = data1 - sum_colorie;
+        var rest = data1.allowed_calorie - sum_calorie;
         res.json({rest_calorie: rest});
       })
     });

@@ -5,28 +5,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <!-- デザイン -->
-    <!-- <link rel='stylesheet' href='./stylesheets/main.css'/> -->
+    <link rel='stylesheet' href='./stylesheets/main.css'/>
     <link rel='stylesheet' href='./stylesheets/calorie.css'/>
     <script src="./javascripts/jquery.min.js"></script>
     <!-- d3.js -->
     <script src="./javascripts/d3.js"></script>
   </head>
   <body>
-   <div id="input_diet">
-     <form name="input_calorie" method="post">
-        カロリー
-        <input type="text" name="calorie" class="calorie"/>
-        体重
-        <input type="text" name="weight" class="weight"/>
-        <input type="submit" id="submit_button" value="送信する">
-     </form>
-  </div>
+  <div id="top">
+     <!-- 日付表示 -->
+     <div id="date"></div>
+     <!-- タイトル表示 -->
+     <div id="title"></div>
+     <!-- カロリー表示 -->
+     <div id="circle">
+     <div id="calorie">
+     </div>
+     </div>
+   </div>
+   <div id="girl_state">
+     <img id="mini_girl" src="./images/girl/1_normal.png">
+   </div>
   <div id="graph">
   <div id="result"></div>
   </div>
-  <div id="girl_state">女の子の状態</div>
+  <div id="input_diet">
+     <form name="input_calorie" method="post">
+         カロリー
+         <input type="text" name="calorie" class="form_style"/>   
+         体重
+         <input type="text" name="weight" class="form_style"/> 
+         <input type="submit" id="submit_button" value="送信する">
+       </div>  
+     </form>
+  </div>
   <!-- グラフを書く -->
   <script src="./javascripts/draw_graph.js"></script>
+  <script src="./javascripts/input.js"></script>
   <script>
   // テストデータ
   // 基本は一週間
@@ -41,6 +56,8 @@
   ];
   // グラフ描画
   draw_graphModule(data);
+  //値を取得する(仮置き)
+  inputModule();
   </script>
   </body>
 </html>

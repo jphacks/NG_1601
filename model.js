@@ -11,11 +11,12 @@ var dbModel = function() {
 
 var schemas = {
   user: new Schema({
-    name:     String,
-    email:    String,
-    password: String,
-    gender:   Number,
-    age:      Number
+    name:            String,
+    email:           String,
+    password:        String,
+    gender:          Number,
+    age:             Number,
+    allowed_colorie: String
   }),
   girl: new Schema({
     user_id:  String,

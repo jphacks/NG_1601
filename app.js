@@ -92,12 +92,12 @@ app.post('/login', function(req, res) {
     'name': name,
     'password': password
   };
-  Model.find('user', query, {}, function(data) {
+  Model.findOne('user', query, {}, function(data) {
     if (data.length === 0) {
       res.redirect('/login.html');
     } else {
-      req.session.user_name = data[0].name;
-      req.session.user_id = data[0].id;
+      req.session.user_name = data.name;
+      req.session.user_id = data.user_id;
       console.log(req.session);
       res.redirect('/');
     }

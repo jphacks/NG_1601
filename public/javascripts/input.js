@@ -3,7 +3,7 @@
 function init(){
   $.ajax({
     type: 'GET',
-    url: '/api/get/rest_calorie',
+    url: '/apis/get/rest_calorie',
     dataType: 'json',
     success: function(response){
 

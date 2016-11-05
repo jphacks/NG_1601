@@ -52,7 +52,6 @@ var food_sample_data = [
   },
 ];
 
-<<<<<<< HEAD
 var weight_sample_data = [
   {
     user_id: 1,
@@ -130,5 +129,5 @@ var girl_sample_data = [
 var dbM = require('./model.js')();
 
 for(var i=0; i<user_sample_data.length; i++){
-  Model.save('user', user_sample_data[i],{});
+  dbM.save('user', user_sample_data[i],{});
 };

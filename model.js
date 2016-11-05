@@ -4,11 +4,6 @@ var dbModel = function() {
  var mongoose = require('mongoose');
  mongoose.Promise = global.Promise;
 
-
-
-
-
-
  // 定義フェーズ
  var Schema   = mongoose.Schema;
 

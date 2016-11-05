@@ -51,7 +51,7 @@ var schemas = {
 
 var models = {
   user: ('User', schemas.user),
-  girl: ('Girl', schemas.girl),
+  girl:, ('Girl', schemas.girl),
   food: ('Food', schemas.food),
   user_food: ('UserFood', schemas.user_food),
   weight: ('Weight', schemas.weight),
@@ -63,7 +63,7 @@ var models = {
  // コネクト
  mongoose.connect('mongodb://localhost/sample_db');
 
- function save(modelname, data, callback) {
+ function save(modelName, data, callback) {
    var _model = models[modelname];
    var model = new _model();
    Object.keys(data).forEach(function(key) {
@@ -74,6 +74,15 @@ var models = {
      if(err) {console.log(err);}
      callback();
    })
+ }
+
+ function find(modelName, query, option, callback) {
+   models[modelName].find(query, option, function(err, data) {
+     if(err) {
+       console.log(err);
+     }
+     callback(data);
+   });
  }
 
 
@@ -97,12 +106,16 @@ var models = {
 
 
 
+<<<<<<< HEAD
+ function find(スキーマ名, クエリ, コールバック) {
+=======
  function find(modelname, query, option, callback) {
    var _model = models[modelname];
    var model = new _model();
    model.find({_id: req.params.id}, function(err,){
 
   });
+>>>>>>> upstream/dev
 
  }
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>fat-cats</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- デザイン -->
+    <link rel='stylesheet' href='./stylesheets/main.css'/>
+    <script src="./javascripts/jquery.min.js"></script>
+  </head>
+  <body>
+
+   <div id="top">
+     <!-- 日付表示 -->
+     <div id="date"></div>
+     <!-- タイトル表示 -->
+     <div id="title"></div>
+     <!-- カロリー表示 -->
+     <div id="calorie"></div>
+   </div>
+
+   <div id="main">女の子</div>
+
+   <div id="bottom">
+     <!-- カロリー入力へ -->
+     <a href="./calorie.html" id="input_calorie">カロリー入力</a>
+     <!-- AR入力へ -->
+     <a href="./ar.html" id="input_ar">AR</a>
+     <!-- その他へ -->
+     <a href="./other.html" id="input_ar">その他</a>
+   </div>
+
+  </body>
+  <!-- データベースから値取得 -->
+  <script src="./javascripts/input.js"></script>
+  <script>
+  //値を取得する(仮置き)
+  inputModule();
+  </script>
+</html>

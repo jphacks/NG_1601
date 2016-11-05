@@ -1,0 +1,65 @@
+body {
+  margin: 0px;	
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#top{
+	width: 100%;
+	height: 50px;
+	padding-top: 10px;
+	background: orange;
+	color: white;
+}
+
+#main{
+	width: 100%;
+	height: 500px;
+}
+
+#bottom{
+	width: 100%;
+	height: 116px;
+	background: #ccc;
+}
+
+#date{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+#title{
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+
+#calorie{
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+
+#input_calorie{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+#input_ar{
+	width: 33%;
+	height: 100%;
+	float: left;
+}
+
+#input_other{
+	width: 34%;
+	height: 100%;
+	float: left;
+}

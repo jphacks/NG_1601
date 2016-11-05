@@ -1,12 +1,13 @@
 body {
   margin: 0px;
+  width: 375px;
   font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 
 a {
   text-decoration: none;
-  padding-top: 20px;
+  height: 44px;
   color: white;
 }
 
@@ -85,15 +86,12 @@ img {
 
 #circle{
 	position: absolute;
-    right: -125px;
-    top: -125px;
-    /*background-color: orange;*/
+    right: 0px;
+    top: 0px;
     color: white;
-    width: 250px;
-    height: 250px;
-    -webkit-border-radius: 125px;/* width,heightの半分 */
-	-moz-border-radius: 125px;
-	border-radius: 125px;
+    width: 130px;
+    height: 130px;
+    border-radius:0 0 0 115px;
     font-size: 13px;
     background-image:-moz-linear-gradient(
     top,
@@ -107,19 +105,24 @@ img {
 }
 
 #input_calorie{
-	width: 33%;
-	height: 100%;
+	width: 124px;
+	height: 44px;
+    padding-top: 20px;
+    border-right:solid 1px #fff;
 	float: left;
 }
 
 #input_ar{
-	width: 33%;
-	height: 100%;
+	width: 124px;
+	height: 44px;
+    padding-top: 20px;
+    border-right:solid 1px #fff;
 	float: left;
 }
 
 #input_other{
-	width: 34%;
-	height: 100%;
+	width: 126px;
+	height: 44px;
+    padding-top: 20px;
 	float: left;
 }

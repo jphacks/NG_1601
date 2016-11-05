@@ -15,39 +15,50 @@ var schemas = {
     gender:   Number,
     age:      Number
   }),
+  girl: new Schema({
+    user_id:  Number,
+    status:   Number,
+  }),
   food: new Schema({
-    name: String,
-    calorie: Number
+    name:     String,
+    calorie:  String
+  }),
+  user_food: new Schema({
+    user_id: Number,
+    food_id: Number,
+    date:    Date
   }),
   weight:  new Schema({
     user_id:  Number,
     weight:   Number,
     date:     Date
   }),
-  girl: new Schema({
-    user_id: Number,
+  girl_weight:  new Schema({
+    user_id:  Number,
+    weight:   Number,
+    date:     Date
+  }),
+  training: new Schema({
     name:     String,
-    status:   Number
+    calorie:  Number
   }),
-  traning: new Schema({
-    id: Number,
-    neme: String,
-    calorie: Number,
-  }),
-  ate: new Schama({
-    user_id: Number,
-    food_id: Number,
-    date:    Date
+  user_training: new Schema({
+    user_id:     Number,
+    training_id: Number,
+    date:        Date
   })
 };
 
 var models = {
   user: ('User', schemas.user),
+  girl:, ('Girl', schemas.girl),
   food: ('Food', schemas.food),
+  user_food: ('UserFood', schemas.user_food),
   weight: ('Weight', schemas.weight),
   girl: ('Girl', schemas.girl),
+  girl_weight: ('GirlWeight', schemas.weight),
   traning: ('Training', schemas.traning),
-  ate: ('Ate', schemas.ate)
+  user_training: ('UserTraining', schemas.user_training),
 };
 
  // コネクト

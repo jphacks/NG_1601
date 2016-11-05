@@ -40,7 +40,7 @@ app.use(session({
 
 
 app.get('/',loginCheck ,function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.send(__dirname);
 });
 
 
@@ -58,7 +58,7 @@ app.post('/addNewUser', function(req, res) {
 
 app.get('/login', function(req, res) {
   var id = req.query.id;
-  var email = req.query.email;
+  // var email = req.query.email;
   var password = req.query.password;
   var query = {'email': email, 'password': password};
   User.find(query, function(err, data) {

@@ -97,7 +97,7 @@ traning
 // });
 
 
-
+//この三行はコメントアウトしちゃ駄目
 dbM.find('user',     {}, {}, function   (users) {
 dbM.find('food',     {}, {}, function   (foods) {
 dbM.find('training', {}, {}, function(trainings) {
@@ -245,20 +245,124 @@ dbM.find('training', {}, {}, function(trainings) {
   /*****************************************
   girl_weight
   *****************************************/
-  var girl_weight_sample = [
-    {
-      user_id:  users[0]._id,
-      weight:   50,
-      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
-    },
-  ];
+  // var girl_weight_sample = [
+  //   {
+  //     user_id:  users[0]._id,
+  //     weight:   50,
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id:  users[0]._id,
+  //     weight:   50,
+  //     date: (new Date('Sun, 2 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id:  users[0]._id,
+  //     weight:   50,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id:  users[1]._id,
+  //     weight:   50,
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id:  users[1]._id,
+  //     weight:   100,
+  //     date: (new Date('Sun, 2 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id:  users[1]._id,
+  //     weight:   200,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //
+  //   {
+  //     user_id:  users[2]._id,
+  //     weight:   50,
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id:  users[2]._id,
+  //     weight:   40,
+  //     date: (new Date('Sun, 2 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id:  users[2]._id,
+  //     weight:   20,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  // ];
+  // girl_weight_sample.forEach(function(d) {
+  //   dbM.save('girl_weight', d);
+  // });
+
 
 
   /*****************************************
   user_training
   *****************************************/
-
-
+  // var user_training_sample = [
+  //   {
+  //     user_id: users[0]._id,
+  //     training_id: trainings[0]._id,
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[0]._id,
+  //     training_id: trainings[1],
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[0]._id,
+  //     training_id:trainings[2] ,
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[1]._id,
+  //     training_id: trainings[0]._id,
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[1]._id,
+  //     training_id: trainings[0]._id,
+  //     date: (new Date('Sun, 2 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[1]._id,
+  //     training_id: trainings[0]._id,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[2]._id,
+  //     training_id: trainings[0]._id,
+  //     date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[3]._id,
+  //     training_id: trainings[1]._id,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[3]._id,
+  //     training_id: trainings[1]._id,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[3]._id,
+  //     training_id: trainings[3]._id,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  //   {
+  //     user_id: users[1]._id,
+  //     training_id: trainings[3]._id,
+  //     date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+  //   },
+  // ];
+  // user_training_sample.forEach(function(d) {
+  //   dbM.save('user_training', d);
+  // });
+//この三行はコメントアウトしちゃ駄目
 });
 });
 });

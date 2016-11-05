@@ -36,3 +36,15 @@ getGirlInfo	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl
 getTraiging	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_training.js	/^  function getTraiging() {$/;"	function	line:5
 getUserWeight	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_user_weight.js	/^	function getUserWeight() {$/;"	function	line:4
 getGirlWeight	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl_weight.js	/^	function getGirlWeight() {$/;"	function	line:3
+dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
+dbModel.schemas.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var schemas = {$/;"	property	line:12
+dbModel.models.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var models = {$/;"	property	line:55
+save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:69
+dbModel.save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:69
+find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:82
+dbModel.find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:82
+dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
+isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1
+isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1
+statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
+statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14

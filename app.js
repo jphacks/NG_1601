@@ -7,9 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var MongoStore = require('connect-mongo')(express);
 
 var app = express();
+var MongoStore = require('connect-mongo')(express);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -33,7 +33,7 @@ app.use(express.session({
       httpOnly: false,
       maxAge: new Date(Date.now() + 60 * 60 * 1000)
   }
-})); 
+}));
 
 var loginCheck = function(req, res, next) {
   if(req.session.user) {

@@ -106,7 +106,6 @@ var models = {
 
 
 
-
  function find(modelname, query, option, callback) {
    var _model = models[modelname];
    var model = new _model();

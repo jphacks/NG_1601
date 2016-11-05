@@ -7,7 +7,7 @@ var loginCheck = require('../loginChecker.js');
 
 
 router.get('/user', loginCheck, function(req,res){
-  Model.find('user', req.params.query, function(data) {
+  Model.find('user', req.params.query, req.params.option, function(data) {
     res.send(data);
   });
 });

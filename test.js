@@ -1,18 +1,12 @@
+var hoge  = new Date("Sat, 3 Nov 2016 00:00:00 +0900");
 
-
-
-
-var hoge = require('./model.js')();
 console.log(hoge);
-// hoge.save('user', {
-//   name: 'hisatoshi',
-//   email: 'hisatoshi@toralab.org',
-//   password: 'kakikukeko',
-//   gender: 1,
-//   age: 1
-// });
+hoge_str = hoge.toString();
+console.log(hoge_str);
+console.log(new Date(hoge_str))
+console.log((new Date('Sat, 3 Nov 2016 00:00:00 +0900')).toString());
 
-
-hoge.find('user', {}, {}, function(data) {
-  console.log(data);
-});
+var h = {
+  date: (new Date('Sat, 3 Nov 2016 00:00:00 +0900')).toString()
+};
+console.log(h);

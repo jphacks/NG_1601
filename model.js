@@ -41,6 +41,7 @@ var schemas = {
     date:     String
   }),
   training: new Schema({
+
     name:     String,
     calorie:  Number
   }),
@@ -58,7 +59,7 @@ var models = {
   user_food: mongoose.model('UserFood', schemas.user_food),
   weight: mongoose.model('Weight', schemas.weight),
   girl_weight: mongoose.model('GirlWeight', schemas.weight),
-  traning: mongoose.model('Training', schemas.training),
+  training: mongoose.model('Training', schemas.training),
   user_training: mongoose.model('UserTraining', schemas.user_training),
 };
 

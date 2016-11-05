@@ -6,68 +6,72 @@ var dbModel = function() {
  var Schema   = mongoose.Schema;
 
  //スキーマをたくさん
- var UserSchema = new Schema({
-   name:     String,
-   email:    String,
-   password: String,
-   gender:   Number,
-   age:      Number
- });
 
- var FoodSchema = new Schema({
-   name:     String,
-   calorie:  Number
- });
+var schemas = {
+  user: new Schema({
+    name:     String,
+    email:    String,
+    password: String,
+    gender:   Number,
+    age:      Number
+  }),
+  food: new Schema({
+    name:     String,
+    email:    String,
+    password: String,
+    gender:   Number,
+    age:      Number
+  }),
+  weight:  new Schema({
+    user_id:  Number,
+    weight:   Number,
+    date:     Date
+  }),
+  weightTransition: new Schema({
+    user_id:         Number,
+    changed_weight:  Number,
+    event_at:        Date
+  }),
+  girl: new Schema({
+    name:     String,
+    status:   Number
+  }),
+  girl : new Schema({
+    name:     String,
+    status:   Number
+  }),
+  ate: new Schama({
+    user_id: Number,
+    food_id: Number,
+    date:    Date
+  })
+};
 
- var WeightSchema = new Schema({
-   user_id:  Number,
-   weight:   Number,
-   date:     Date
- });
-
- var WeightTransitionSchema = new Schema({
-   user_id:         Number,
-   changed_weight:  Number,
-   event_at:        Date
- });
-
- var GirlSchema = new Schema({
-   name:     String,
-   status:   Number
- });
-
- var TrainingSchema = new Schema({
-   name:     String,
-   calorie:  Number
- });
-
- var AteSchama = new Schama({
-   user_id: Number,
-   food_id: Number,
-   date:    Date
- });
-
- //
-
- //モデルの登録をたくさん
- mongoose.model('User', UserSchema);
- mongoose.model('Food', FoodSchema);
- mongoose.model('Weight', WeightSchema);
- mongoose.model('WeightTransition', WeightTransitionSchema);
- mongoose.model('Girl', GirlSchema);
- mongoose.model('Training', TrainingSchema);
- mongoose.model('Ate', AteSchema);
-
-
-
- //
-
-
+var models = {
+  user: ('User', schemas.user),
+  food: ('Food', schemas.food),
+  weight: ('Weight', schemas.weight),
+  weightTransition:, ('WeightTransition', schemas.weightTransition),
+  girl:, ('Girl', schemas.girl),
+  traning: ('Training', schemas.traning),
+  ate: ('Ate', schemas.ate)
+};
 
  // コネクト
  mongoose.connect('mongodb://localhost/sample_db');
 
-
+ function save(modelname, data, callback) {
+   var _model = models[modelname];
+   var model = new _model();
+   Object.keys(data).forEach(function(key) {
+     model[key] = data[key];
+   });
+   model.save(function(err) {
+     //とりあえず
+     if(err) {console.log(err);}
+     callback();
+   })
+ }
 
 
  //セーブのサンプル
@@ -89,9 +93,6 @@ var dbModel = function() {
  // });
 
 
- function save(スキーマ名, データ, コールバック) {
-
- }
 
  function find(スキーマ名, クエリ, コールバック) {
 

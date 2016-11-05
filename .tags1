@@ -4,5 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
-statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
+isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1
+sum	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^    var sum  = function(arr) {$/;"	function	line:27
+isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1

@@ -17,7 +17,6 @@ var statusCalcular = function(user_id, _callback){
   var callback = _callback || function(){};
   var status;
   var today = new Date();
-  var overChecks;
 
 //ユーザーが登録して2日以内だったらGirlのステータスは変化しない
   Model.find('Weight', {user_id:user_id},function(err,weights){
@@ -26,15 +25,9 @@ var statusCalcular = function(user_id, _callback){
     };
   });
 
-//直近3日間それぞれ、isOverColorieしているか取得
-  for (var i=1; i<4; i++) {
-    if (overChecks.push(isOverColorie( user_id, today.setDate(today.getDate() - i) ))) {
-      overChecks += 1;
-    };
-  };
 
   Model.findOne('Girl', {user_id: user_id}, function(err,girl){
-    if (overChecks > 2){
+    if (isOverColorie()){
       if (girl.status != 3) {
         girl.status += 1;
       }

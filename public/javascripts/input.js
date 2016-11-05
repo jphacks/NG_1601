@@ -12,11 +12,11 @@ var inputModule = function(){
  //     });
 
    //仮置き
-	var calorie = 30;
+	var calorie = 1030;
 	var date = "11月5日";
 	var title = "タイトル";
 
-	document.getElementById('calorie').innerHTML = "残り" + calorie + "calorie";
-	document.getElementById('title').innerHTML = title;
+	document.getElementById('calorie').innerHTML = "残り" + calorie + "cal";
+	// document.getElementById('title').innerHTML = title;
 	document.getElementById('date').innerHTML = date;
 }

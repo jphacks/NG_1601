@@ -95,35 +95,6 @@ var models = {
  }
 
 
- //セーブのサンプル
- // var User = mongoose.model('User');
- // var user = new User();
- // user.name  = 'KrdLab';
- // user.point = 777;
- // user.save(function(err) {
- //   if (err) { console.log(err); }
- // });
-
- // ※注意：イベント駆動
-
- //ファインドのサンプル
- // User.find({}, function(err, docs) {
- //   for (var i=0, size=docs.length; i<size; ++i) {
- //     console.log(docs[i].doc.name);
- //   }
- // });
-
-
-
- function find(modelname, query, option, _callback) {
-   var callback = _callback || function() {};
-
-   models[modelname].find(query, option,  function(err, data){
-     if(err) {console.log(err);}
-     callback(data);
-  });
- }
-
  return {
    save: save,
    find: find

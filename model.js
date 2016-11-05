@@ -51,7 +51,7 @@ var schemas = {
 
 var models = {
   user: ('User', schemas.user),
-  girl:, ('Girl', schemas.girl),
+  girl: ('Girl', schemas.girl),
   food: ('Food', schemas.food),
   user_food: ('UserFood', schemas.user_food),
   weight: ('Weight', schemas.weight),
@@ -106,17 +106,13 @@ var models = {
 
 
 
-<<<<<<< HEAD
- function find(スキーマ名, クエリ, コールバック) {
-=======
+
  function find(modelname, query, option, callback) {
    var _model = models[modelname];
    var model = new _model();
-   model.find({_id: req.params.id}, function(err,){
+   model.find({_id: req.params.id}, function(err, data){
 
   });
->>>>>>> upstream/dev
-
  }
 
  return {

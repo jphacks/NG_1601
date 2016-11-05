@@ -1,3 +1,7 @@
-var hoge = require('./loginChecker');
+
 
 console.log(hoge);
+
+var hoge = require('./model.js')();
+
+hoge.save();

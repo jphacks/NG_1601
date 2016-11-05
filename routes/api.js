@@ -68,7 +68,7 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
 });
 
 
-router.get('/get/rest_calorie', function(req, res) {
+router.get('/get/rest_calorie', loginCheck, function(req, res) {
   console.log('---------------------------------------');
   Model.findOne('user', {user_id: req.session.user_id}, {}, function(data1) {
     Model.find('user_food', {user_id: req.session.user_id}, {}, function(data2) {
@@ -83,7 +83,7 @@ router.get('/get/rest_calorie', function(req, res) {
         }
       });
       if(food_ids.length === 0) {
-        res.json({rest_calorie: data1['allowed_calorie']});
+        res.json({rest_calorie: data1['allowed_calorie'] || 2000});
       } else {
         var sum_calorie = 0;
         Model.find('food', {$or: food_ids}, {}, function(data3) {

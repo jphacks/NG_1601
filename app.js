@@ -6,16 +6,15 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// var routes = require('./routes/index');
+// var users = require('./routes/users');
 var apis = require('./routes/api');
 
 var app = express();
 
-var Model = require('./models.js')();
+var Model = require('./model.js')();
 
 
-var dbModel = require('./model.js')();
 var loginCheck = require('./loginChecker.js');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -66,7 +65,7 @@ app.post('/login', function(req, res) {
     'name': name,
     'password': password
   };
-  Model.findOne('user', query, function(data) {
+  Model.find('user', query, function(data) {
     if(err) {
       console.log(err);
     }

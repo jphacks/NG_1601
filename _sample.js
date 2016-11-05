@@ -129,3 +129,6 @@ var girl_sample_data = [
     status: 3,
   }
 ];
+
+
+var dbM = require('./model.js')();

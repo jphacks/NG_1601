@@ -29,6 +29,24 @@ a {
 #graph{
 	width: 100%;
 	height: 300px;
+  background: #fff1e5;
+}
+
+#graph_title{
+  width: 100%;
+  height: 30px;
+  padding-top: 7px;
+  background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+ 
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+  color: #fff;  
+
 }
 
 #mini_girl{
@@ -39,7 +57,7 @@ a {
 #girl_state{
 	width: 100%;
 	height: 216px;
-	background: #fcddba;
+	background-image: url('../images/background/beach.png');
 }
 
 #submit_button{
@@ -63,6 +81,7 @@ a {
 
 .form_style {
   border-radius: 5px;
+  width: 100px;
 }
 
 .centering{

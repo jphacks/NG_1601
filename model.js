@@ -97,7 +97,12 @@ var models = {
 
 
 
- function find(modelname, クエリ, コールバック) {
+ function find(modelname, query, option, callback) {
+   var _model = models[modelname];
+   var model = new _model();
+   model.find({_id: req.params.id}, function(err,circle){
+
+  });
 
  }
 

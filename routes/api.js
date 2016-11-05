@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Model = require('../model.js');
-var loginCheck = require('./loginChecker.js');
+var loginCheck = require('../loginChecker.js');
 // var mongodb = require('mongodb');
 // var mongoose = require('mongoose');
 

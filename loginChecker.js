@@ -1,4 +1,4 @@
-var loginCheck = function(req, res, next) {
+var loginChecker = function(req, res, next) {
   if(req.session.user) {
     next();
   } else {
@@ -6,4 +6,4 @@ var loginCheck = function(req, res, next) {
   }
 }
 
-module.exports = loginCheck;
+module.exports  = loginChecker;

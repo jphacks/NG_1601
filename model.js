@@ -98,6 +98,7 @@ var models = {
    var _model = models[modelname];
    var model = new _model();
    model.find({_id: req.params.id}, function(err){
+
  return {
    save: save,
    find: find

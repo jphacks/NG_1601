@@ -4,13 +4,4 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-body	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^body {$/;"	function	line:1
-a	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^a {$/;"	function	line:7
-#input_diet	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^#input_diet{$/;"	function	line:12
-#graph	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^#graph{$/;"	function	line:20
-#girl_state	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^#girl_state{$/;"	function	line:25
-#submit_button	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^#submit_button{$/;"	function	line:31
-.calorie	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^.calorie {$/;"	function	line:39
-.weight	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^.weight {$/;"	function	line:43
-.axis path	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^.axis path,$/;"	function	line:48
-.axis line	/Users/matsutaniyushiro/Projects/NG_1601/public/stylesheets/calorie.css	/^.axis line {$/;"	function	line:49
+getGirlWeight	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl_weight.js	/^	function getGirlWeight() {$/;"	function	line:3

@@ -11,7 +11,7 @@
   <body>
    <!-- AR -->
    <div id="ar">
-   <input type="file" accept="image/*">
+   <div id="result"></div>
    </div>
    <!-- 女の子が手に入れたもの -->
    <div id="get_list">
@@ -36,5 +36,31 @@
    eat_foodModule(eat_data);
 
    </script>
+   <script>
+      window.addEventListener("load", function(){
+        var result = document.getElementById("result");
+         
+        if (!navigator.geolocation){
+          result.innerHTML = "Geolocation 使用不可";
+          return;
+        }
+         
+        var option = {
+          timeout : 10000
+        }
+        navigator.geolocation.watchPosition(resultHandler, faultHandler, option);
+         
+        function resultHandler(position){
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+          result.innerHTML = "緯度："+latitude+"<br>" + 
+            "経度："+longitude;
+        }
+         
+        function faultHandler(error){
+          result.innerHTML = error.code;
+        }
+      }, true);
+    </script>
   </body>
 </html>

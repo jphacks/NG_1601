@@ -16,29 +16,23 @@ var schemas = {
     age:      Number
   }),
   food: new Schema({
-    name:     String,
-    email:    String,
-    password: String,
-    gender:   Number,
-    age:      Number
+    name: String,
+    calorie: Number
   }),
   weight:  new Schema({
     user_id:  Number,
     weight:   Number,
     date:     Date
   }),
-  weightTransition: new Schema({
-    user_id:         Number,
-    changed_weight:  Number,
-    event_at:        Date
-  }),
   girl: new Schema({
+    user_id: Number,
     name:     String,
     status:   Number
   }),
-  girl : new Schema({
-    name:     String,
-    status:   Number
+  traning: new Schema({
+    id: Number,
+    neme: String,
+    calorie: Number,
   }),
   ate: new Schama({
     user_id: Number,

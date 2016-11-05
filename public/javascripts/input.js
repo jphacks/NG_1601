@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 function init(){
   $.ajax({
     type: 'GET',

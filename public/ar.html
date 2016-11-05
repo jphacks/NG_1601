@@ -9,10 +9,32 @@
     <script src="./javascripts/jquery.min.js"></script>
   </head>
   <body>
+   <!-- AR -->
+   <div id="ar">
+   <input type="file" accept="image/*">
+   </div>
+   <!-- 女の子が手に入れたもの -->
+   <div id="get_list">
+     <div class="food_title">手に入れた食べ物</div>
+     <div id="get_food_list"></div>
+   </div>
+   <!-- 女の子が食べたもの -->
+   <div id="eat_list">
+     <div class="food_title">食べた食べ物</div>
+     <div id="eat_food_list"></div>
+   </div>
+   <script src="./javascripts/get_food.js"></script>
+   <script src="./javascripts/eat_food.js"></script>
+   <script>
+   //テストデータ
+   //手に入れたもの(仮)
+   var get_data = ["ハンバーガー","サンドイッチ","ピザ","パスタ","パスタ","パスタ","パスタ"];
+   get_foodModule(get_data);
 
-   <div id="ar">女の子</div>
-   <div id="food_list">食べ物リスト</div>
+   //手に入れたもの(仮)
+   var eat_data = ["おにぎり","昆布","梅","シャケ"];
+   eat_foodModule(eat_data);
 
-  </body>
+   </script>
   </body>
 </html>

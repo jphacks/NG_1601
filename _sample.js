@@ -24,7 +24,7 @@ var user_sample_data = [
       }
     ],
     current_position: {
-      x: 4,
+      x: 2,
       y: 5
     },
     muscle_point: 10
@@ -48,7 +48,7 @@ var user_sample_data = [
       }
     ],
     current_position: {
-      x: 4,
+      x: 2,
       y: 5
     },
     muscle_point: 10
@@ -73,7 +73,7 @@ var user_sample_data = [
       }
     ],
     current_position: {
-      x: 4,
+      x: 2,
       y: 5
     },
     muscle_point: 10
@@ -98,8 +98,8 @@ var user_sample_data = [
       }
     ],
     current_position: {
-      x: 4,
-      y: 5
+      x: 2,
+      y: 3
     },
     muscle_point: 10
 

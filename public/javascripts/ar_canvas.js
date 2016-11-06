@@ -14,23 +14,14 @@ var ar_canvas = function() {
 
   function init() {
     $.get('/apis/get/user', function(data) {
-      // current_position.x = data.current_position.x;
-      // current_position.y = data.current_position.y;
-      // tresure_positions = data.tresure_positions;
-      current_position.x = 5;
-      current_position.y = 4;
-      tresure_positions = [
-        {
-          x: 0,
-          y: 6
-        },
-        {
-          x: 4,
-          y: 5
-        },
-      ]
+      data = data[0];
+      console.log(data);
+      current_position.x = data.current_position.x;
+      current_position.y = data.current_position.y;
+      tresure_positions = data.tresure_positions;
+      console.log(current_position);
       // muscle_point = data.muscle_point;
-      muscle_point = 5;
+      muscle_point = data.muscle_point;
 
       map= new Image();
       map.src='../images/background/map.png';
@@ -83,8 +74,8 @@ var ar_canvas = function() {
       var newPosition = {};
       newPosition.x =parseInt(x/area_size);
       newPosition.y =parseInt(y/area_size);
-      var distance =         Math.abs(newPosition.x - current_position.x) + Math.abs(newPosition.x - current_position.x);
-      if(distance < muscle_point) {
+      var distance =         Math.abs(newPosition.x - current_position.x) + Math.abs(newPosition.y - current_position.y);
+      if(distance <= muscle_point) {
         current_position.x = newPosition.x;
         current_position.y = newPosition.y;
         muscle_point -=distance;

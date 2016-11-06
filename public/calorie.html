@@ -28,17 +28,15 @@
    </div>
   <div id="graph">
     <div id="graph_title">一週間の体重とカロリー</div>
-  <div id="result">
-  </div>
+  <div id="result"></div>
   </div>
   <div id="input_diet">
-     <form name="input_calorie" method="post">
+     <form name="input_calorie" method="post" url='/apis/add_weight_food'>
          食べ物
-         <input type="text" name="food" class="form_style"/>   
+         <input type="text" name="food" class="form_style"/>
          体重
-         <input type="number" name="weight" class="form_style"/> 
+         <input type="number" name="weight" class="form_style"/>
          <input type="submit" id="submit_button" value="送信する">
-       </div>  
      </form>
   </div>
   <!-- グラフを書く -->
@@ -47,19 +45,22 @@
   <script>
   // テストデータ
   // 基本は一週間
-   var data = [
-  [ new Date(2014, 4, 21), 58, 2000],
-  [ new Date(2014, 4, 22), 59, 1800],
-  [ new Date(2014, 4, 23), 60, 2300],
-  [ new Date(2014, 4, 24), 58, 2000],
-  [ new Date(2014, 4, 25), 59, 1800],
-  [ new Date(2014, 4, 26), 60, 2300],
-  [ new Date(2014, 4, 27), 70, 2300]
-  ];
-  // グラフ描画
-  draw_graphModule(data);
-  //値を取得する(仮置き)
-  inputModule();
+  // $.get('/apis/get_one_week_data', function(data) {
+
+    var data = [
+   [ new Date(2016, 10, 30), 58, 2000],
+   [ new Date(2016, 10, 31), 59, 1800],
+   [ new Date(2016, 11, 1), 60, 2300],
+   [ new Date(2016, 11, 2), 58, 2000],
+   [ new Date(2016, 11, 3), 59, 1800],
+   [ new Date(2016, 11, 4), 60, 2300],
+   [ new Date(2016, 11, 5), 70, 2300]
+   ];
+    console.log(data);
+
+      draw_graphModule(data);
+  // });
+
   </script>
   </body>
 </html>

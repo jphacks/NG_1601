@@ -7,14 +7,12 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var mongoStore = require('connect-mongo')(session);
 
-
-
-
+var app = express();
 // var routes = require('./routes/index');
 // var users = require('./routes/users');
 var apis = require('./routes/api');
 
-var app = express();
+
 
 var Model = require('./model.js');
 
@@ -29,7 +27,7 @@ app.use(session({
   store: new mongoStore({
     url: 'mongodb://127.0.0.1/session',
     autoRemove: 'interval',
-    autoRemoveInterval: 60
+    autoRemoveInterval: 6000
   }),
   cookie: {
     httpOnly: true,
@@ -71,8 +69,6 @@ app.post('/addNewUser', function(req, res) {
 app.post('/login', function(req, res) {
   var name = req.body.name;
   var password = req.body.password;
-  console.log(typeof password);
-  console.log(password);
   var query = {
     'name': name,
     'password': password

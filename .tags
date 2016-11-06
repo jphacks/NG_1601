@@ -39,28 +39,6 @@ isOver
 
 statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
 statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
-html	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^<html>$/;"	function	line:2
-head	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <head>$/;"	function	line:3
-title	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <title>fat-cats<\/title>$/;"	function	line:4
-meta	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <meta http-equiv="Content-Type" content="text\/html; charset=UTF-8">$/;"	function	line:5
-meta	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <meta charset="utf-8">$/;"	function	line:6
-meta	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">$/;"	function	line:7
-link	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <link rel='stylesheet' href='.\/stylesheets\/main.css'\/>$/;"	function	line:9
-script	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <script src=".\/javascripts\/jquery.min.js"><\/script>$/;"	function	line:10
-body	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <body>$/;"	function	line:12
-div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^   <div id="top">$/;"	function	line:14
-div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <div id="date"><\/div>$/;"	function	line:16
-div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <div id="title"><\/div>$/;"	function	line:18
-div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <div id="circle">$/;"	function	line:20
-div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <div id="calorie">$/;"	function	line:21
-div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^   <div id="main">$/;"	function	line:26
-canvas	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <canvas id="girl"><\/canvas>$/;"	function	line:27
-div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^   <div id="bottom">$/;"	function	line:30
-a	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <a href=".\/calorie.html" id="input_calorie">カロリー入力<\/a>$/;"	function	line:32
-a	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <a href=".\/ar.html" id="input_ar">AR<\/a>$/;"	function	line:34
-a	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <a href=".\/other.html" id="input_ar">その他<\/a>$/;"	function	line:36
-script	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <script src=".\/javascripts\/input.js"><\/script>$/;"	function	line:41
-script	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <script src=".\/javascripts\/girl_canvas.js"><\/script>$/;"	function	line:42
 Model	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var Model = require('.\/model.js');$/;"	variable	line:14
 isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var isSameDay = require('.\/modules\/isSameDay.js');$/;"	variable	line:15
 hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
@@ -78,12 +56,6 @@ apis	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var apis = require('.\/ro
 app	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var app = express();$/;"	variable	line:17
 Model	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var Model = require('.\/model.js');$/;"	variable	line:19
 loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var loginCheck = require('.\/loginChecker.js');$/;"	variable	line:22
-express	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var express = require('express');$/;"	variable	line:1
-router	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var router = express.Router();$/;"	variable	line:2
-Model	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var Model = require('..\/model.js');$/;"	variable	line:3
-loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var loginCheck = require('..\/loginChecker.js');$/;"	variable	line:4
-isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var isSameDay = require('..\/modules\/isSameDay');$/;"	variable	line:5
-statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var statusCalcular = require('..\/modules\/statusCalculate');$/;"	variable	line:6
 isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, _callback){$/;"	function	line:2
 sum	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^    var sum  = function(arr) {$/;"	function	line:29
 isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, _callback){$/;"	function	line:2
@@ -97,3 +69,31 @@ dbModel.find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(
 findOne	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^function findOne(modelName, query, option, _callback) {$/;"	function	line:107
 dbModel.findOne	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^function findOne(modelName, query, option, _callback) {$/;"	function	line:107
 dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
+express	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var express = require('express');$/;"	variable	line:1
+router	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var router = express.Router();$/;"	variable	line:2
+Model	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var Model = require('..\/model.js');$/;"	variable	line:3
+loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var loginCheck = require('..\/loginChecker.js');$/;"	variable	line:4
+isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var isSameDay = require('..\/modules\/isSameDay');$/;"	variable	line:5
+statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var statusCalcular = require('..\/modules\/statusCalculate');$/;"	variable	line:6
+html	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^<html>$/;"	function	line:2
+head	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <head>$/;"	function	line:3
+title	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <title>fat-cats<\/title>$/;"	function	line:4
+meta	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <meta http-equiv="Content-Type" content="text\/html; charset=UTF-8">$/;"	function	line:5
+meta	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <meta charset="utf-8">$/;"	function	line:6
+meta	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">$/;"	function	line:7
+link	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <link rel='stylesheet' href='.\/stylesheets\/main.css'\/>$/;"	function	line:9
+script	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^    <script src=".\/javascripts\/jquery.min.js"><\/script>$/;"	function	line:10
+body	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <body>$/;"	function	line:12
+div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^   <div id="top">$/;"	function	line:14
+a	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <a href=".\/index.html" id="title">fat-cat(s)<\/a>$/;"	function	line:16
+div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <div id="date"><\/div>$/;"	function	line:18
+div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <div id="circle">$/;"	function	line:20
+div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <div id="calorie">$/;"	function	line:21
+div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^   <div id="main">$/;"	function	line:26
+canvas	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <canvas id="girl"><\/canvas>$/;"	function	line:27
+div	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^   <div id="bottom">$/;"	function	line:30
+a	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <a href=".\/calorie.html" id="input_calorie">食べ物入力<\/a>$/;"	function	line:32
+a	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <a href=".\/ar.html" id="input_ar">AR<\/a>$/;"	function	line:34
+a	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^     <a href=".\/list.html" id="input_ar">筋ゴチ<\/a>$/;"	function	line:36
+script	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <script src=".\/javascripts\/input.js"><\/script>$/;"	function	line:41
+script	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^  <script src=".\/javascripts\/girl_canvas.js"><\/script>$/;"	function	line:42

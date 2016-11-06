@@ -68,6 +68,10 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
   res.send(ret);
 });
 
+router.get('get/status_calcular', loginCheck, function(req,res){
+  statusCalcular(req.session.user_id);
+});
+
 
 router.get('/get/rest_calorie', loginCheck, function(req, res) {
   console.log('---------------------------------------');
@@ -107,7 +111,6 @@ router.get('/get/:modelName', loginCheck, function(req,res){
 
   Model.find(req.params.modelName, {user_id: user_id}, {}, function(data) {
     console.log(data);
-    console.log(statusCalcular());
     res.json(data);
   });
 });

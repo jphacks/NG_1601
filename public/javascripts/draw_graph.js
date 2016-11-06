@@ -5,7 +5,7 @@ var h = 300;
 
 var padding = 20; // グラフの余白
 var xAxisPadding = 40; // x軸表示余白
-var yAxisPadding = 60; // x軸表示余白
+var yAxisPadding = 80; // x軸表示余白
 
 var displayNum = data.length - 1; // 表示日数
 var dayWidth = (w - xAxisPadding - padding * 2) / displayNum; // 1日分の横幅
@@ -42,14 +42,14 @@ svg.append("g")
 	.attr("transform", "translate(" + xAxisPadding + ", " + (h - yAxisPadding) + ")")
 	.call(xAxis)
 	.selectAll("text")
-	.attr("x", 10)
-	.attr("y", -5)
-	.attr("transform", "rotate(90)")
+	.attr("x", -10)
+	.attr("y", 10)
+	.attr("transform", "rotate(0)")
 	.style("text-anchor", "start");
 
 svg.append("g")
 	.attr("class", "axis")
-	.attr("transform", "translate(" + xAxisPadding + ", 0)")
+	.attr("transform", "translate(" + (xAxisPadding) + ", 20)")
 	.call(yAxis);
 
 // 折れ線グラフ
@@ -58,7 +58,7 @@ var line = d3.svg.line()
 		return (i * dayWidth) + xAxisPadding + padding;
 	})
 	.y(function(d){
-		return h - padding - yAxisPadding - ((h - yAxisPadding - padding * 2) / 100 * d[1] );
+		return h - padding - yAxisPadding - ((h - yAxisPadding - padding * 2) / 100 * d[1] ) + 20;
 	});
 
 svg.append("path")
@@ -95,7 +95,7 @@ svg.selectAll(".weight_circle")
         return (i * dayWidth) + xAxisPadding + padding;
     })
     .attr("cy", function(d){
-        return h - padding - yAxisPadding - ((h - yAxisPadding - padding * 2) / 100 * d[1] );
+        return h - padding - yAxisPadding - ((h - yAxisPadding - padding * 2) / 100 * d[1] ) + 20;
     })
     .attr("r", 0)
     .attr("stroke", "#ed5454")

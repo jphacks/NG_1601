@@ -86,7 +86,7 @@ router.get('/get/rest_calorie', loginCheck, function(req, res) {
         res.json({rest_calorie: data1['allowed_calorie'] || 2000});
       } else {
         var sum_calorie = 0;
-        Model.find('food', {$or: food_ids}, {}, function(data3) {
+        Model.find('food', {$or: food_ids}        , {}, function(data3) {
           data3.forEach(function(food) {
             sum_calorie+=food.calorie;
           });

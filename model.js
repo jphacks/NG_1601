@@ -101,7 +101,7 @@ var models = {
      if(err) {
        console.log(err);
      }
-     console.log(data);f
+     console.log(data);
      callback(data);
    });
  }

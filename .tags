@@ -35,19 +35,8 @@ getUserFoodList	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_
 getTraiging	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_training.js	/^  function getTraiging() {$/;"	function	line:5
 getUserWeight	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_user_weight.js	/^	function getUserWeight() {$/;"	function	line:4
 getGirlWeight	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl_weight.js	/^	function getGirlWeight() {$/;"	function	line:3
-dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
-dbModel.schemas.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var schemas = {$/;"	property	line:12
-dbModel.models.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var models = {$/;"	property	line:55
-save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:69
-dbModel.save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:69
-find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:82
-dbModel.find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:82
-dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
 isOver
 
-isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, _callback){$/;"	function	line:2
-sum	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^    var sum  = function(arr) {$/;"	function	line:28
-isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, _callback){$/;"	function	line:2
 statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
 statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/modules/statusCalculate.js	/^var statusCalcular = function(user_id, _callback){$/;"	function	line:14
 html	/Users/matsutaniyushiro/Projects/NG_1601/public/index.html	/^<html>$/;"	function	line:2
@@ -95,3 +84,16 @@ Model	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var Model = requi
 loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var loginCheck = require('..\/loginChecker.js');$/;"	variable	line:4
 isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var isSameDay = require('..\/modules\/isSameDay');$/;"	variable	line:5
 statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var statusCalcular = require('..\/modules\/statusCalculate');$/;"	variable	line:6
+isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, _callback){$/;"	function	line:2
+sum	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^    var sum  = function(arr) {$/;"	function	line:29
+isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, _callback){$/;"	function	line:2
+dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
+dbModel.schemas.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var schemas = {$/;"	property	line:12
+dbModel.models.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var models = {$/;"	property	line:70
+save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:84
+dbModel.save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:84
+find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:97
+dbModel.find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:97
+findOne	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^function findOne(modelName, query, option, _callback) {$/;"	function	line:107
+dbModel.findOne	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^function findOne(modelName, query, option, _callback) {$/;"	function	line:107
+dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1

@@ -4,9 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-express	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var express = require('express');$/;"	variable	line:1
-router	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var router = express.Router();$/;"	variable	line:2
-Model	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var Model = require('..\/model.js');$/;"	variable	line:3
-loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var loginCheck = require('..\/loginChecker.js');$/;"	variable	line:4
-isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var isSameDay = require('..\/modules\/isSameDay');$/;"	variable	line:5
-statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var statusCalcular = require('..\/modules\/statusCalculate');$/;"	variable	line:6
+dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1
+dbModel.schemas.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var schemas = {$/;"	property	line:12
+dbModel.models.user	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var models = {$/;"	property	line:70
+save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:84
+dbModel.save	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function save(modelName, data, _callback) {$/;"	function	line:84
+find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:97
+dbModel.find	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^ function find(modelName, query, option, _callback) {$/;"	function	line:97
+findOne	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^function findOne(modelName, query, option, _callback) {$/;"	function	line:107
+dbModel.findOne	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^function findOne(modelName, query, option, _callback) {$/;"	function	line:107
+dbModel	/Users/matsutaniyushiro/Projects/NG_1601/model.js	/^var dbModel = function() {$/;"	function	line:1

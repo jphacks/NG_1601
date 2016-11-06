@@ -3,6 +3,7 @@ var router = express.Router();
 var Model = require('../model.js');
 var loginCheck = require('../loginChecker.js');
 var isSameDay = require('../modules/isSameDay');
+var statusCalcular = require('../modules/statusCalculate');
 
 
 router.post('/add/:modelName', loginCheck, function(req,res){
@@ -128,6 +129,14 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
   res.send(ret);
 });
 
+router.get('get/status_calcular', loginCheck, function(req,res){
+  Medel.findOne('girl', {user_id: req.sesion.user_id},{}, function(girl){
+    var status = [0,1,2]
+    var r = Math.floor(Math.random * status.length);
+    girl.status = status[r]
+  });
+});
+
 
 router.get('/get/rest_calorie', loginCheck, function(req, res) {
 
@@ -176,6 +185,8 @@ router.get('/get/:modelName', loginCheck, function(req,res){
 
 // //user_idの女の子の情報を取得
 // router.get('/get/girl', loginCheck, function(req,res){
+//   console.log(statusCalculatar());
+//    statusCalcular(user_id);
 // });
 //
 //

@@ -2,33 +2,31 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <link rel='stylesheet' href='./stylesheets/main.css'/>
   <link rel='stylesheet' href='./stylesheets/list.css'/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <script src="./javascripts/jquery.min.js"></script>
   <title>筋トレとご馳走</title>
 </head>
 <body>
-  <div id='top'>
-    <!-- 日付表示 -->
-    <div id="date"></div>
-    <!-- タイトル表示 -->
-    <div id="title"></div>
-    <!-- カロリー表示 -->
-    <div id="circle">
-    <div id="calorie">
-    </div>
-    </div>
-  </div>
-
-
-
-<div id="main">
-  <ul id='muscle_training_list'></ul>
-  <ul id='food_list'></ul>
+  <div id="top">
+     <!-- ロゴ -->
+     <a href="./index.html" id="title">fat-cat(s)</a>
+     <!-- 日付表示 -->
+     <div id="date"></div>
+     <!-- カロリー表示 -->
+     <div id="circle">
+     <div id="calorie">
+     </div>
+     </div>
+   </div>
+<button calss='muscle_run' type="button" value="yaru">やる</button>
+<div id="food_table">
+  <div class="list_title">筋トレで手に入れた物</div>
+  <div id='muscle_training_list'></div>
+  <div class="list_title">食べた物</div>
+  <div id='food_list'></div>
 </div>
-
-
-
 
   <div id='bottom'>
     <!-- カロリー入力へ -->
@@ -38,7 +36,7 @@
     <!-- その他へ -->
     <a href="./list.html" id="input_ar">筋ゴチ</a>
   </div>
-
+  <script src="./javascripts/input.js"></script>
   <script src='./javascripts/list.js'></script>
 </body>
 </html>

@@ -15,8 +15,9 @@ function init(){
      var date = _month+"月"+_day+"日";
      var title = "猫やせ";
 
-      document.getElementById('calorie').innerHTML = "残り" + calorie + "calorie";
-      document.getElementById('title').innerHTML = title;
+      document.getElementById('calorie').innerHTML = "残り" + calorie + "<br>kcal";
+      //ロゴにまわす
+      // document.getElementById('title').innerHTML = title;
       document.getElementById('date').innerHTML = date;
       },
       error: function(response){

@@ -59,7 +59,20 @@
     console.log(data);
 
       draw_graphModule(data);
-  // });
+
+      var sB = document.getElementById('submit_button');
+    sB.addEventListener('click', function(e) {
+      var b = document.getElementsByClassName('form_style');
+      // console.log(b);
+
+      b[0].value = "";
+      b[1].value= "";
+      setTimeout(function(){
+        var h = document.getElementById('calorie');
+        h.innerHTML = '残り1028<br>kcal';
+      },500);
+      
+  });
 
   </script>
   </body>

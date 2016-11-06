@@ -16,13 +16,60 @@ body{
     background: #ffddaa;
 }
 .header *{
-  margin: 0px auto;
-  padding: 5px 10px;
-  color: #eeeeee;
-  background: #ffaa44;
+  height: 30px;
+    width: 100%;
+    color: white;
+    float: left;
+    background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+
+}
+
+#header{
+  height: 50px;
+    width: 100%;
+    color: white;
+    float: left;
+    padding-top: 20px;
+    background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+    text-align: center;
 }
 #form01{
   margin: 0px auto;
   text-align: center;
   padding: 5px 0px;
+}
+
+#submit{
+   width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+ 
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+    box-shadow:0px;
+    border-radius: 50px;
+    border: solid 2px #ffa035;
 }

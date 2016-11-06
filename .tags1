@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1
-sum	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^    var sum  = function(arr) {$/;"	function	line:27
-isOverColorie	/Users/matsutaniyushiro/Projects/NG_1601/modules/isOverColorie.js	/^var isOverColorie = function(user_id, date, _callback){$/;"	function	line:1
+Model	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var Model = require('.\/model.js');$/;"	variable	line:14
+isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var isSameDay = require('.\/modules\/isSameDay.js');$/;"	variable	line:15
+hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
+hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17

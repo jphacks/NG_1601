@@ -71,11 +71,15 @@ app.post('/addNewUser', function(req, res) {
 app.post('/login', function(req, res) {
   var name = req.body.name;
   var password = req.body.password;
+  console.log(typeof password);
+  console.log(password);
   var query = {
     'name': name,
     'password': password
   };
   Model.findOne('user', query, {}, function(data) {
+    console.log(data);
+    console.log('dataの値');
     if (!data) {
       res.redirect('/login.html');
     } else {

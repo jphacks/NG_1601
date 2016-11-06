@@ -8,40 +8,100 @@ var user_sample_data = [
 
     name: 'suginyan',
     email: 'suginyan@sugisugi.jp',
-    password: 0000,
+    password: '0000',
     gender: 0,
     age: 22,
     user_id: 0,
-    allowed_calorie: 2000
+    allowed_calorie: 2000,
+    tresure_positions: [
+      {
+        x: 0,
+        y: 6
+      },
+      {
+        x: 4,
+        y: 5
+      }
+    ],
+    current_position: {
+      x: 4,
+      y: 5
+    },
+    muscle_point: 10
   },
   {
     name: 'tasuo',
     email: 'tasuo@sugisugi.jp',
-    password: 0000,
+    password: '0000',
     gender: 0,
     age:22,
     user_id: 1,
-    allowed_calorie: 2000
+    allowed_calorie: 2000,
+    tresure_positions: [
+      {
+        x: 0,
+        y: 6
+      },
+      {
+        x: 4,
+        y: 5
+      }
+    ],
+    current_position: {
+      x: 4,
+      y: 5
+    },
+    muscle_point: 10
 
   },
   {
     name: 'uuusiro',
     email: 'uuusiro@sugisugi.jp',
-    password: 0000,
+    password: '0000',
     gender: 0,
     age: 22,
     user_id: 2,
-    allowed_calorie: 2000
+    allowed_calorie: 2000,
+    tresure_positions: [
+      {
+        x: 0,
+        y: 6
+      },
+      {
+        x: 4,
+        y: 5
+      }
+    ],
+    current_position: {
+      x: 4,
+      y: 5
+    },
+    muscle_point: 10
 
   },
   {
     name: 'hisatoshi',
     email: 'hisatoshi@sugisugi.jp',
-    password: 0000,
+    password: '0000',
     gender: 0,
     age: 23,
     user_id: 3,
-    allowed_calorie: 2000
+    allowed_calorie: 2000,
+    tresure_positions: [
+      {
+        x: 0,
+        y: 6
+      },
+      {
+        x: 4,
+        y: 5
+      }
+    ],
+    current_position: {
+      x: 4,
+      y: 5
+    },
+    muscle_point: 10
 
   },
   {
@@ -51,7 +111,22 @@ var user_sample_data = [
     gender: 1,
     age: 55,
     user_id: 4,
-    allowed_calorie: 2000
+    allowed_calorie: 2000,
+    tresure_positions: [
+      {
+        x: 0,
+        y: 6
+      },
+      {
+        x: 4,
+        y: 5
+      }
+    ],
+    current_position: {
+      x: 4,
+      y: 5
+    },
+    muscle_point: 10
 
   }
 ];
@@ -224,41 +299,49 @@ girl
      user_id: 0,
      food_id: 0,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: false
    },
    {
      user_id: 0,
      food_id: 1,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: false
    },
    {
      user_id: 0,
      food_id: 2,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: true
    },
    {
      user_id: 1,
      food_id: 0,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: false
    },
    {
      user_id: 1,
      food_id: 0,
      date: (new Date('Sun, 2 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: false
    },
    {
      user_id: 1,
      food_id: 0,
      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: false
    },
    {
      user_id: 2,
      food_id: 0,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: true
    },
    {
      user_id: 3,
      food_id: 1,
      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+     is_ate: false
    }
  ];
  user_food_sample.forEach(function(d) {
@@ -332,56 +415,67 @@ girl
      user_id: 0,
      training_id: 0,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_inished: true
    },
    {
      user_id: 0,
      training_id: 1,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_inished: false
    },
    {
      user_id: 0,
      training_id:2 ,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: false
    },
    {
      user_id: 1,
      training_id: 0,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: true
    },
    {
      user_id: 1,
      training_id: 0,
      date: (new Date('Sun, 2 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: true
    },
    {
      user_id: 1,
      training_id: 0,
      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: true
    },
    {
      user_id: 2,
      training_id: 0,
      date: (new Date('Sat, 1 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: false
    },
    {
      user_id: 3,
      training_id: 1,
      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: false
    },
    {
      user_id: 3,
      training_id: 1,
      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: true
    },
    {
      user_id: 3,
      training_id: 3,
      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: true
    },
    {
      user_id: 1,
      training_id: 3,
      date: (new Date('Mon, 3 Nov 2016 00:00:00 +0900')).toString(),
+     is_finished: true
    },
  ];
  user_training_sample.forEach(function(d) {

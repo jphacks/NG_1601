@@ -42,7 +42,7 @@ var schemas = {
     user_id: String,
     food_id: String,
     date:    String,
-    is_finished: Boolean
+    is_ate: Boolean
   }),
   weight:  new Schema({
     user_id:  String,

@@ -76,7 +76,7 @@ app.post('/login', function(req, res) {
     'password': password
   };
   Model.findOne('user', query, {}, function(data) {
-    if (data.length === 0) {
+    if (!data) {
       res.redirect('/login.html');
     } else {
       req.session.user_name = data.name;

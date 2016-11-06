@@ -1,5 +1,5 @@
 var draw_graphModule = function(data){
- 
+
 var w = 300;
 var h = 300;
 
@@ -20,7 +20,7 @@ var svg = d3.select("#result")
 var xScale = d3.time.scale()
 	.domain([
 		data[0][0],
-		data[6][0]
+		data[displayNum][0]
 	])
 	.range([padding, w - xAxisPadding - padding]);
 
@@ -71,7 +71,7 @@ svg.data(data)
    .selectAll("rect")  // SVGでの四角形を示す要素を指定
     .data(data) // データを設定
     .enter()
-    .append("rect") 
+    .append("rect")
     .attr("x", function(d,i){   // X座標を配列の順序に応じて計算
         return (i * dayWidth) + xAxisPadding + padding - 5;
     })

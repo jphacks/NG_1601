@@ -47,6 +47,26 @@
 
 
 
-var hoge = [
-  
-]
+// var hoge = [
+//
+// ]
+
+
+// function fuga(char, callback) {
+//   console.log(char);
+//   callback();
+// }
+// function hoge() {
+//   console.log('i');
+// }
+//
+// fuga('a', hoge);
+
+
+var i = new Date();
+var j;
+
+setTimeout(function(){
+  j = new Date();
+  console.log(i-j);
+}, 1000);

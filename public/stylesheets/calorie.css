@@ -19,7 +19,7 @@ a {
     top,
     #ffa035 0%,
     #ff8300);
- 
+
     background-image:-webkit-gradient(
     linear,left top,left bottom,
     from(#ffa035),
@@ -40,12 +40,12 @@ a {
     top,
     #ffa035 0%,
     #ff8300);
- 
+
     background-image:-webkit-gradient(
     linear,left top,left bottom,
     from(#ffa035),
     to(#ff8300));
-  color: #fff;  
+  color: #fff;
 
 }
 
@@ -69,7 +69,7 @@ a {
     top,
     #ffa035 0%,
     #ff8300);
- 
+
     background-image:-webkit-gradient(
     linear,left top,left bottom,
     from(#ffa035),
@@ -87,7 +87,7 @@ a {
 .centering{
   width: 50%;
   height: 30px;
-  float: left;	
+  float: left;
 }
 
 .axis path,

@@ -10,19 +10,19 @@ a {
   height: 44px;
   color: white;
 }
-
+/*
 img {
-	width: 408px;
-	height: 512px;
-}
+    width: 408px;
+    height: 512px;
+}*/
 
 #top{
-	width: 100%;
-	height: 50px;
-	padding-top: 10px;
-	/*background: orange;*/
-	color: white;
-	background-image:-moz-linear-gradient(
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    /*background: orange;*/
+    color: white;
+    background-image:-moz-linear-gradient(
     top,
     #ffa035 0%,
     #ff8300);
@@ -34,18 +34,17 @@ img {
 }
 
 #main{
-	width: 100%;
-	height: 550px;
-	background: #fcddba;
-  /*background-image: url('../images/background/beach.png');*/
+    width: 100%;
+    height: 540px;
+    background: #fcddba;
   /*background-size: 100%;*/
 }
 
 #bottom{
-	width: 100%;
-	height: 66px;
-	font-size: 18px;
-	background-image:-moz-linear-gradient(
+    width: 100%;
+    height: 66px;
+    font-size: 18px;
+    background-image:-moz-linear-gradient(
     top,
     #ffa035 0%,
     #ff8300);
@@ -59,22 +58,22 @@ img {
 
 
 
-#date{
-	width: 30%;
-	height: 30px;
-	padding-top: 10px;
-	font-size: 20px;
-	float: left;
+/*#date{
+    width: 30%;
+    height: 30px;
+    padding-top: 10px;
+    font-size: 20px;
+    float: left;
 }
 
 #title{
-	width: 60%;
-	height: 100%;
-	float: left;
-}
+    width: 60%;
+    height: 100%;
+    float: left;
+}*/
 
-#calorie{
-	position: absolute;
+/*#calorie{
+    position: absolute;
     right: 150px;
     top: 150px;
     color: white;
@@ -82,10 +81,10 @@ img {
     height: 50px;
     font-size: 18px;
     text-align: center;
-}
+}*/
 
 #circle{
-	position: absolute;
+    position: absolute;
     right: 0px;
     top: 0px;
     color: white;
@@ -102,27 +101,50 @@ img {
     linear,left top,left bottom,
     from(#ff4500),
     to(#ff8300));
+  }
+
+#food_list{
+    width: 100%;
+    height: 540px;
+    background: orange;
 }
 
 #input_calorie{
-	width: 124px;
-	height: 44px;
+    width: 124px;
+    height: 44px;
     padding-top: 20px;
     border-right:solid 1px #fff;
-	float: left;
+    float: left;
 }
 
 #input_ar{
-	width: 124px;
-	height: 44px;
+    width: 124px;
+    height: 44px;
     padding-top: 20px;
     border-right:solid 1px #fff;
-	float: left;
+    float: left;
 }
 
 #input_other{
-	width: 126px;
-	height: 44px;
+    width: 126px;
+    height: 44px;
     padding-top: 20px;
-	float: left;
+    float: left;
+}
+
+.food_title{
+    width: 186px;
+    padding-top: 5px;
+    height: 30px;
+    background: orange;
+    color: white;
+    background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
 }

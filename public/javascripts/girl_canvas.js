@@ -47,7 +47,7 @@ var girl_canvas = function() {
     console.log(current_expression);
     ctx.font = 'italic 400 30px/2 Unknown Font, sans-serif';
     ctx.clearRect(0, 0, _element.width, _element.height);
-    ctx.drawImage(image, (_element.width-image.width*0.5)*0.5, (_element.height-image.height*0.5)*0.5, image.width*0.5, image.height*0.5)
+    ctx.drawImage(image, (_element.width-image.width*0.4)*0.4, (_element.height-image.height*0.4)*0.4, image.width*0.4, image.height*0.4)
     setTimeout(refresh_expression,2000);
   }
 

@@ -11,7 +11,7 @@ a {
 
 #input_diet{
 	width: 100%;
-	height: 90px;
+	height: 80px;
 	padding-top: 10px;
 	background: orange;
 	color: white;
@@ -51,6 +51,7 @@ a {
 
 #mini_girl{
 	width: 153px;
+  padding-top: 10px;
 	height: 192px;
 }
 

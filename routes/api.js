@@ -91,27 +91,29 @@ user_idはセッションにより取得
 
 //ユーザが持っている食べ物一覧
 router.get('/get/food_list', loginCheck, function(req, res) {
-  Model.find('user_food', {user_id: request.session.user_id}, {}, function(data) {
+  Model.find('user_food', {user_id: req.session.user_id}, {}, function(data) {
     var ret = [];
+    var _ret = {};
+    var query = [];
 
-    data.forEach(function(d) {
-      var _ret = {};
-      _ret.food_id = d.food_id;
-      _ret.date = d.date;
 
-      Model.findOne('food', {food_id: d.food_id}, {}, function(f) {
-        _ret.calorie = f.calorie;
-        _ret.name = f.name;
-      });
+    for(var i=0; i< data.length; i++) {
+      _ret.food_id = data.food_id;
+      _ret.date = data.date;
+    }
+    Model.find('food', {food_id: _ret['food_id']}, {}, function(d1) {
+      console.log(d1);
+      _ret.calorie = d1.calorie;
+      _ret.name = d1.name;
+      res.json(_ret);
     });
-    ret.push(_ret);
   });
-  res.send(ret);
 });
+
 
 //ユーザが持っているトレーニング一覧
 router.get('/get/traning_list', loginCheck, function(req, res) {
-  Model.find('user_training', {user_id: request.session.user_id}, {}, function(data) {
+  Model.find('user_training', {user_id: req.session.user_id}, {}, function(data) {
     var ret = [];
 
     data.forEach(function(d) {

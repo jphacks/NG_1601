@@ -115,9 +115,11 @@ router.get('/get/:modelName', loginCheck, function(req,res){
 //↓の奴が出来る．
 
 // //user_idの女の子の情報を取得
-// router.get('/get/girl', loginCheck, function(req,res){
-//    statusCalcular(user_id);
-// });
+router.get('/get/girl', loginCheck, function(req,res){
+  console.log("ooooo");
+  console.log(statusCalculatar());
+   statusCalcular(user_id);
+});
 //
 //
 // //user_idで食べ物取得

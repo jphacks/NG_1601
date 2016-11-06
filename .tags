@@ -77,12 +77,6 @@ isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var isSameDay = req
 hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
 hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
 getGirlInfo	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl_info.js	/^function getGirlInfo() {$/;"	function	line:5
-express	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var express = require('express');$/;"	variable	line:1
-router	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var router = express.Router();$/;"	variable	line:2
-Model	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var Model = require('..\/model.js');$/;"	variable	line:3
-loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var loginCheck = require('..\/loginChecker.js');$/;"	variable	line:4
-isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var isSameDay = require('..\/modules\/isSameDay');$/;"	variable	line:5
-statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var statusCalcular = require('..\/modules\/statusCalculate');$/;"	variable	line:6
 express	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var express = require('express');$/;"	variable	line:1
 path	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var path = require('path');$/;"	variable	line:2
 favicon	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var favicon = require('serve-favicon');$/;"	variable	line:3
@@ -95,3 +89,9 @@ apis	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var apis = require('.\/ro
 app	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var app = express();$/;"	variable	line:17
 Model	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var Model = require('.\/model.js');$/;"	variable	line:19
 loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var loginCheck = require('.\/loginChecker.js');$/;"	variable	line:22
+express	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var express = require('express');$/;"	variable	line:1
+router	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var router = express.Router();$/;"	variable	line:2
+Model	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var Model = require('..\/model.js');$/;"	variable	line:3
+loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var loginCheck = require('..\/loginChecker.js');$/;"	variable	line:4
+isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var isSameDay = require('..\/modules\/isSameDay');$/;"	variable	line:5
+statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var statusCalcular = require('..\/modules\/statusCalculate');$/;"	variable	line:6

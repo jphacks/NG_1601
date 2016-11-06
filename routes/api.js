@@ -91,22 +91,29 @@ user_idはセッションにより取得
 
 //ユーザが持っている食べ物一覧
 router.get('/get/food_list', loginCheck, function(req, res) {
-  Model.find('user_food', {user_id: req.session.user_id}, {}, function(data) {
-    var ret = [];
-    var _ret = {};
-    var query = [];
-
-
-    for(var i=0; i< data.length; i++) {
-      _ret.food_id = data.food_id;
-      _ret.date = data.date;
-    }
-    Model.find('food', {food_id: _ret['food_id']}, {}, function(d1) {
-      console.log(d1);
-      _ret.calorie = d1.calorie;
-      _ret.name = d1.name;
-      res.json(_ret);
+  var ret = [];
+  Model.find('user_food', {user_id: req.session.user_id}, {}, function(data0) {
+    Model.find('food', {}, {}, function(data1) {
+      data0.forEach(function(d0) {
+        data1.forEach(function(d1) {
+          console.log(d0.food_id);
+          console.log(d1);
+          console.log(d0.food_id === d1.food_id);
+          console.log();
+          if(d0.food_id == d1.food_id) {
+            ret.push({
+              user_id: d0['user_id'],
+              food_id: d0['food_id'],
+              food_name: d1['name'],
+              food_calorie: d1['alorie']
+            });
+            console.log('？');
+            console.log(ret);
+          }
+        });
+      });
     });
+    res.send({data: ret});
   });
 });
 
@@ -140,35 +147,35 @@ router.get('get/status_calcular', loginCheck, function(req,res){
 });
 
 
-router.get('/get/rest_calorie', loginCheck, function(req, res) {
-
-  Model.findOne('user', {user_id: req.session.user_id}, {}, function(data1) {
-    Model.find('user_food', {user_id: req.session.user_id}, {}, function(data2) {
-      var food_ids = [];
-      var today = (new Date()).toString();
-      // var today = 'Tue Nov 01 2016 00:00:00 GMT+0900 (JST)'
-      data2.forEach(function(d) {
-        if(isSameDay(today, d.date)) {
-          food_ids.push({
-            food_id: d['food_id']
-          });
-        }
-      });
-      if(food_ids.length === 0) {
-        res.json({rest_calorie: data1['allowed_calorie'] || 2000});
-      } else {
-        var sum_calorie = 0;
-        Model.find('food', {$or: food_ids} , {}, function(data3) {
-          data3.forEach(function(food) {
-            sum_calorie+=food.calorie;
-          });
-          var rest = data1.allowed_calorie - sum_calorie;
-          res.json({rest_calorie: rest});
-        });
-      }
-    });
-  });
-});
+// router.get('/get/rest_calorie', loginCheck, function(req, res) {
+//
+//   Model.findOne('user', {user_id: req.session.user_id}, {}, function(data1) {
+//     Model.find('user_food', {user_id: req.session.user_id}, {}, function(data2) {
+//       var food_ids = [];
+//       var today = (new Date()).toString();
+//       // var today = 'Tue Nov 01 2016 00:00:00 GMT+0900 (JST)'
+//       data2.forEach(function(d) {
+//         if(isSameDay(today, d.date)) {
+//           food_ids.push({
+//             food_id: d['food_id']
+//           });
+//         }
+//       });
+//       if(food_ids.length === 0) {
+//         res.json({rest_calorie: data1['allowed_calorie'] || 2000});
+//       } else {
+//         var sum_calorie = 0;
+//         Model.find('food', {$or: food_ids} , {}, function(data3) {
+//           data3.forEach(function(food) {
+//             sum_calorie+=food.calorie;
+//           });
+//           var rest = data1.allowed_calorie - sum_calorie;
+//           res.json({rest_calorie: rest});
+//         });
+//       }
+//     });
+//   });
+// });
 
 //ユーザの情報を取得
 router.get('/get/:modelName', loginCheck, function(req,res){

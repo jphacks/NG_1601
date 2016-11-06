@@ -1,7 +1,5 @@
 var loginChecker = function(req, res, next) {
   if(req.session.user_id) {
-    console.log('ログインチェックに入ってる');
-    console.log(req.session.user_id);
     next();
   } else {
     res.redirect('/login');

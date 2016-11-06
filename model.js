@@ -96,11 +96,12 @@ var models = {
 
  function find(modelName, query, option, _callback) {
    var callback = _callback || function(){};
-   
+
    models[modelName].find(query, option, function(err, data) {
      if(err) {
        console.log(err);
      }
+     console.log(data);f
      callback(data);
    });
  }

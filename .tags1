@@ -4,7 +4,15 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Model	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var Model = require('.\/model.js');$/;"	variable	line:14
-isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var isSameDay = require('.\/modules\/isSameDay.js');$/;"	variable	line:15
-hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
-hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
+express	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var express = require('express');$/;"	variable	line:1
+path	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var path = require('path');$/;"	variable	line:2
+favicon	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var favicon = require('serve-favicon');$/;"	variable	line:3
+logger	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var logger = require('morgan');$/;"	variable	line:4
+cookieParser	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var cookieParser = require('cookie-parser');$/;"	variable	line:5
+bodyParser	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var bodyParser = require('body-parser');$/;"	variable	line:6
+session	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var session = require('express-session');$/;"	variable	line:7
+mongoStore	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var mongoStore = require('connect-mongo')(session);$/;"	variable	line:8
+apis	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var apis = require('.\/routes\/api');$/;"	variable	line:15
+app	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var app = express();$/;"	variable	line:17
+Model	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var Model = require('.\/model.js');$/;"	variable	line:19
+loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var loginCheck = require('.\/loginChecker.js');$/;"	variable	line:22

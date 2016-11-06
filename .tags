@@ -32,7 +32,6 @@ script	/Users/matsutaniyushiro/Projects/NG_1601/public/ar.html	/^   <script src=
 script	/Users/matsutaniyushiro/Projects/NG_1601/public/ar.html	/^   <script>$/;"	function	line:28
 get_foodModule	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_food.js	/^	var get_foodModule = function(data){$/;"	function	line:3
 getUserFoodList	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_food.js	/^	function getUserFoodList() {$/;"	function	line:11
-getGirlInfo	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl_info.js	/^function getGirlInfo() {$/;"	function	line:6
 getTraiging	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_training.js	/^  function getTraiging() {$/;"	function	line:5
 getUserWeight	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_user_weight.js	/^	function getUserWeight() {$/;"	function	line:4
 getGirlWeight	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl_weight.js	/^	function getGirlWeight() {$/;"	function	line:3
@@ -77,3 +76,22 @@ Model	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var Model = require('.\
 isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^var isSameDay = require('.\/modules\/isSameDay.js');$/;"	variable	line:15
 hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
 hoge	/Users/matsutaniyushiro/Projects/NG_1601/test.js	/^function hoge() {$/;"	function	line:17
+getGirlInfo	/Users/matsutaniyushiro/Projects/NG_1601/public/javascripts/get_girl_info.js	/^function getGirlInfo() {$/;"	function	line:5
+express	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var express = require('express');$/;"	variable	line:1
+router	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var router = express.Router();$/;"	variable	line:2
+Model	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var Model = require('..\/model.js');$/;"	variable	line:3
+loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var loginCheck = require('..\/loginChecker.js');$/;"	variable	line:4
+isSameDay	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var isSameDay = require('..\/modules\/isSameDay');$/;"	variable	line:5
+statusCalcular	/Users/matsutaniyushiro/Projects/NG_1601/routes/api.js	/^var statusCalcular = require('..\/modules\/statusCalculate');$/;"	variable	line:6
+express	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var express = require('express');$/;"	variable	line:1
+path	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var path = require('path');$/;"	variable	line:2
+favicon	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var favicon = require('serve-favicon');$/;"	variable	line:3
+logger	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var logger = require('morgan');$/;"	variable	line:4
+cookieParser	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var cookieParser = require('cookie-parser');$/;"	variable	line:5
+bodyParser	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var bodyParser = require('body-parser');$/;"	variable	line:6
+session	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var session = require('express-session');$/;"	variable	line:7
+mongoStore	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var mongoStore = require('connect-mongo')(session);$/;"	variable	line:8
+apis	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var apis = require('.\/routes\/api');$/;"	variable	line:15
+app	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var app = express();$/;"	variable	line:17
+Model	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var Model = require('.\/model.js');$/;"	variable	line:19
+loginCheck	/Users/matsutaniyushiro/Projects/NG_1601/app.js	/^var loginCheck = require('.\/loginChecker.js');$/;"	variable	line:22

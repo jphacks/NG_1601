@@ -3,6 +3,7 @@ var router = express.Router();
 var Model = require('../model.js');
 var loginCheck = require('../loginChecker.js');
 var isSameDay = require('../modules/isSameDay');
+var statusCalcular = require('../modules/statusCalculate');
 
 
 router.post('/add/:modelName', loginCheck, function(req,res){
@@ -115,6 +116,7 @@ router.get('/get/:modelName', loginCheck, function(req,res){
 
 // //user_idの女の子の情報を取得
 // router.get('/get/girl', loginCheck, function(req,res){
+//    statusCalcular(user_id);
 // });
 //
 //

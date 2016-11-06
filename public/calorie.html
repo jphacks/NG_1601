@@ -35,8 +35,8 @@
          食べ物
          <input type="text" name="food" class="form_style"/>
          体重
-         <input type="number" name="weight" class="form_style"/>
-         <input type="submit" id="submit_button" value="送信する">
+         <input type="number" name="weight"  class="form_style"/>
+         <input type="button" id="submit_button" value="送信する">
      </form>
   </div>
   <!-- グラフを書く -->
@@ -57,6 +57,12 @@
    [ new Date(2016, 11, 5), 70, 2300]
    ];
     console.log(data);
+
+    var sB = document.getElementById('submit_button');
+    sB.addEventListener('click', funciton() {
+      var b = document.getElementsByClassName('form_style');
+      console.log(b);
+    });
 
       draw_graphModule(data);
   // });

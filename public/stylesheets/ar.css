@@ -40,7 +40,6 @@ img {
   /*background-size: 100%;*/
 }
 
-<<<<<<< HEAD
 #bottom{
 	width: 100%;
 	height: 66px;
@@ -102,41 +101,9 @@ img {
     linear,left top,left bottom,
     from(#ff4500),
     to(#ff8300));
-=======
-#ar{
-	width: 375px;
-	height: 357px;
-	background-image: url('../images/background/map.png');
-	background-size:contain;
-}
+  }
 
-#get_list{
-	width: 187px;
-	height: 250px;
-	border-right: 1px solid #fcc685;
-	float: left;
-}
 
-#eat_list{
-	width: 187px;
-	height: 250px;
-	float: left;
-}
-
-#get_food_list{
-	width: 100%;
-	height: 215px;
-	overflow:auto;
-}
-
-#eat_food_list{
-	width: 100%;
-	height: 215px;
-	overflow:auto;
->>>>>>> 6b90ca674c2b0b0c1f8752f96309f892fe4576a1
-}
-
-<<<<<<< HEAD
 #input_calorie{
 	width: 124px;
 	height: 44px;
@@ -165,7 +132,7 @@ img {
 	padding-top: 5px;
 	height: 30px;
 	background: orange;
-	color: white;  
+	color: white;
 	background-image:-moz-linear-gradient(
     top,
     #ffa035 0%,
@@ -176,4 +143,3 @@ img {
     from(#ffa035),
     to(#ff8300));
 }
->>>>>>> 6b90ca674c2b0b0c1f8752f96309f892fe4576a1

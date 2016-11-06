@@ -80,6 +80,7 @@ app.post('/login', function(req, res) {
   Model.findOne('user', query, {}, function(data) {
     console.log(data);
     console.log('dataの値');
+
     if (!data) {
       res.redirect('/login.html');
     } else {

@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>fat-cats</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- デザイン -->
+    <link rel='stylesheet' href='./stylesheets/main.css'/>
+    <link rel='stylesheet' href='./stylesheets/calorie.css'/>
+    <script src="./javascripts/jquery.min.js"></script>
+    <!-- d3.js -->
+    <script src="./javascripts/d3.js"></script>
+  </head>
+  <body>
+  <div id="top">
+     <!-- ロゴ -->
+     <a href="./index.html" id="title">fat-cat(s)</a>
+     <!-- 日付表示 -->
+     <div id="date"></div>
+     <!-- カロリー表示 -->
+     <div id="circle">
+     <div id="calorie">
+     </div>
+     </div>
+   </div>
+   <div id="girl_state">
+     <img id="mini_girl" src="./images/girl/1_normal.png">
+   </div>
+  <div id="graph">
+    <div id="graph_title">一週間の体重とカロリー</div>
+  <div id="result"></div>
+  </div>
+  <div id="input_diet">
+     <form name="input_calorie" method="post" url='/apis/add_weight_food'>
+         食べ物
+         <input type="text" name="food" class="form_style"/>
+         体重
+         <input type="number" name="weight"  class="form_style"/>
+         <input type="button" id="submit_button" value="送信する">
+     </form>
+  </div>
+  <!-- グラフを書く -->
+  <script src="./javascripts/draw_graph.js"></script>
+  <script src="./javascripts/input.js"></script>
+  <script>
+  // テストデータ
+  // 基本は一週間
+  // $.get('/apis/get_one_week_data', function(data) {
+
+
+    //テストデータ
+    var data = [
+       [ new Date(2016, 10, 30), 58, 2000],
+       [ new Date(2016, 10, 31), 59, 1800],
+       [ new Date(2016, 11, 1), 60, 2300],
+       [ new Date(2016, 11, 2), 58, 2000],
+       [ new Date(2016, 11, 3), 59, 1800],
+       [ new Date(2016, 11, 4), 60, 2300],
+       [ new Date(2016, 11, 5), 70, 2300]
+   ];
+  console.log(data);
+
+    var sB = document.getElementById('submit_button');
+    sB.addEventListener('click', function(e) {
+      var b = document.getElementsByClassName('form_style');
+      // console.log(b);
+
+      b[0].value = "";
+      b[1].value= "";
+      setTimeout(function(){
+        var h = document.getElementById('calorie');
+        h.innerHTML = '残り1028<br>kcal';
+      },500);
+    });
+    //
+    draw_graphModule(data);
+
+
+
+  </script>
+  </body>
+</html>

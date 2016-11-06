@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#input_diet{
+	width: 100%;
+	height: 80px;
+	padding-top: 10px;
+	background: orange;
+	color: white;
+	background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+}
+
+#graph{
+	width: 100%;
+	height: 300px;
+  background: #fff1e5;
+}
+
+#graph_title{
+  width: 100%;
+  height: 30px;
+  padding-top: 7px;
+  background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+  color: #fff;
+
+}
+
+#mini_girl{
+	width: 153px;
+  padding-top: 10px;
+	height: 192px;
+}
+
+#girl_state{
+	width: 100%;
+	height: 216px;
+	background-image: url('../images/background/beach.png');
+}
+
+#submit_button{
+	width: 200px;
+	height: 30px;
+	margin-top: 10px;
+	color: #ffffff;
+	background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+    box-shadow:0px;
+    border-radius: 50px;
+    border: solid 2px #ffa035;
+}
+
+.form_style {
+  border-radius: 5px;
+  width: 100px;
+}
+
+.centering{
+  width: 50%;
+  height: 30px;
+  float: left;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	stroke-width: 1;
+}

@@ -5,67 +5,71 @@
     box-sizing:border-box;
 }
 
-a{
+body{
+  background: #ffddaa;
 }
 
-#container{
+.container{
     min-width: 300px;
-    max-width: 360px;
-    margin:10px auto;
-    padding:5px;
+    margin:0px auto;
+    padding:0px;
+    background: #ffddaa;
+}
+.header *{
+  height: 30px;
+    width: 100%;
+    color: white;
+    float: left;
+    background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+
 }
 
+#header{
+  height: 50px;
+    width: 100%;
+    color: white;
+    float: left;
+    padding-top: 20px;
+    background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+    text-align: center;
+}
 #form01{
-  width: 300px;
   margin: 0px auto;
   text-align: center;
-  background: #cccccc;
-}
-#header{
-    background:#cccccc;
-    padding: 10px 5px;
+  padding: 5px 0px;
 }
 
-#header h1{
-    font-family:MakinasS5;
-    font-size:2.5em;
-    font-weight:normal;
-    margin:0;
-}
-
-#header h1 small{
-    font-family:inherit;
-    font-size:0.67em;
-}
-
-#main{
-    margin: 20px auto;
-    padding: 5px;
-    background:#dcdcdc;
-    overflow:hidden;
-}
-
-#messageList{
-	margin-top: 20px;
-}
-
-#messageList p{
-	padding: 10px;
-	margin: .25em 0;
-	background: #eeeeee;
-}
-
-#messageList p.myMessage{
-	background: #cceecc;
-}
-
-#messageList p h3{
-	margin: 0 0 .25em 0;
-}
-
-#footer{
-    clear:both;
-    margin:10px auto;
-    padding:5px;
-    border-top:solid 1px black;
+#submit{
+   width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-image:-moz-linear-gradient(
+    top,
+    #ffa035 0%,
+    #ff8300);
+ 
+    background-image:-webkit-gradient(
+    linear,left top,left bottom,
+    from(#ffa035),
+    to(#ff8300));
+    box-shadow:0px;
+    border-radius: 50px;
+    border: solid 2px #ffa035;
 }

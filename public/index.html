@@ -12,30 +12,32 @@
   <body>
 
    <div id="top">
+     <!-- ロゴ -->
+     <a href="./index.html" id="title">fat-cat(s)</a>
      <!-- 日付表示 -->
      <div id="date"></div>
-     <!-- タイトル表示 -->
-     <div id="title"></div>
      <!-- カロリー表示 -->
-     <div id="calorie"></div>
+     <div id="circle">
+     <div id="calorie">
+     </div>
+     </div>
    </div>
 
-   <div id="main">女の子</div>
+   <div id="main">
+     <canvas id="girl"></canvas>
+   </div>
 
    <div id="bottom">
      <!-- カロリー入力へ -->
-     <a href="./calorie.html" id="input_calorie">カロリー入力</a>
+     <a href="./calorie.html" id="input_calorie">食べ物入力</a>
      <!-- AR入力へ -->
-     <a href="./ar.html" id="input_ar">AR</a>
+     <a href="./ar.html" id="input_ar">宝探し</a>
      <!-- その他へ -->
-     <a href="./other.html" id="input_ar">その他</a>
+     <a href="./list.html" id="input_ar">筋ゴチ</a>
    </div>
 
   </body>
   <!-- データベースから値取得 -->
   <script src="./javascripts/input.js"></script>
-  <script>
-  //値を取得する(仮置き)
-  inputModule();
-  </script>
+  <script src="./javascripts/girl_canvas.js"></script>
 </html>

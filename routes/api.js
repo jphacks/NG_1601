@@ -69,7 +69,11 @@ router.get('/get/traning_list', loginCheck, function(req, res) {
 });
 
 router.get('get/status_calcular', loginCheck, function(req,res){
-  statusCalcular(req.session.user_id);
+  Medel.findOne('girl', {user_id: req.sesion.user_id},{}, function(girl){
+    var status = [0,1,2]
+    var r = Math.floor(Math.random * status.length);
+    girl.status = status[r]
+  });
 });
 
 

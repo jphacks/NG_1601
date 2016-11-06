@@ -35,8 +35,8 @@
          食べ物
          <input type="text" name="food" class="form_style"/>
          体重
-         <input type="number" name="weight" class="form_style"/>
-         <input type="submit" id="submit_button" value="送信する">
+         <input type="number" name="weight"  class="form_style"/>
+         <input type="button" id="submit_button" value="送信する">
      </form>
   </div>
   <!-- グラフを書く -->
@@ -48,18 +48,31 @@
   // $.get('/apis/get_one_week_data', function(data) {
 
     var data = [
-   [ new Date(2016, 10, 30), 58, 2000],
-   [ new Date(2016, 10, 31), 59, 1800],
-   [ new Date(2016, 11, 1), 60, 2300],
-   [ new Date(2016, 11, 2), 58, 2000],
-   [ new Date(2016, 11, 3), 59, 1800],
-   [ new Date(2016, 11, 4), 60, 2300],
-   [ new Date(2016, 11, 5), 70, 2300]
+       [ new Date(2016, 10, 30), 58, 2000],
+       [ new Date(2016, 10, 31), 59, 1800],
+       [ new Date(2016, 11, 1), 60, 2300],
+       [ new Date(2016, 11, 2), 58, 2000],
+       [ new Date(2016, 11, 3), 59, 1800],
+       [ new Date(2016, 11, 4), 60, 2300],
+       [ new Date(2016, 11, 5), 70, 2300]
    ];
-    console.log(data);
+  console.log(data);
 
-      draw_graphModule(data);
-  // });
+    var sB = document.getElementById('submit_button');
+    sB.addEventListener('click', function(e) {
+      var b = document.getElementsByClassName('form_style');
+      // console.log(b);
+
+      b[0].value = "";
+      b[1].value= "";
+      setTimeout(function(){
+        var h = document.getElementById('calorie');
+        h.innerHTML = '残り1028<br>kcal';
+      },500);
+    });
+    //
+    draw_graphModule(data);
+
 
   </script>
   </body>
